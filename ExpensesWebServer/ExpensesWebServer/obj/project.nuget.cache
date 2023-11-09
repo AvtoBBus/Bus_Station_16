@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "CNnz0ETUi/CkBpNQBVQoWvdMCqDdq9j5joAIvU9aVWBmEb2F19s0IK4FTlItkBnyk1jhsVFUx8rMUv/ySa0ibg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\globa\\Documents\\c_hashtag\\httpsgithub.comAvtoBBusBus_Station_16\\Bus_Station_16\\ExpensesWebServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\globa\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\globa\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\globa\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\globa\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\globa\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\globa\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
