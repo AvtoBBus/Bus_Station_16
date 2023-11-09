@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "intro";
+    src: url("fonts/intro.ttf");
+}
+
+* {
+    font-family: "intro";
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(85, 26, 139);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+}
