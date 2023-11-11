@@ -1,3 +1,7 @@
+using ExpensesWebServer.Data;
+using ExpensesWebServer.Services;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +10,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<UserContext>(options => 
+options.UseSqlServer(builder.Configuration.GetConnectionString("default")));
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<JWTService>();
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -21,5 +30,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(options => options.AllowAnyHeader().AllowAnyMethod().AllowCredentials());
 
 app.Run();

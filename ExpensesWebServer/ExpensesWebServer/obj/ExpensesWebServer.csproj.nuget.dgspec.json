@@ -1,32 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\globa\\Documents\\c_hashtag\\httpsgithub.comAvtoBBusBus_Station_16\\Bus_Station_16\\ExpensesWebServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {}
+    "C:\\Users\\globa\\OneDrive\\Документы\\C#\\Expenses\\ExpensesWebServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\globa\\Documents\\c_hashtag\\httpsgithub.comAvtoBBusBus_Station_16\\Bus_Station_16\\ExpensesWebServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {
+    "C:\\Users\\globa\\OneDrive\\Документы\\C#\\Expenses\\ExpensesWebServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\globa\\Documents\\c_hashtag\\httpsgithub.comAvtoBBusBus_Station_16\\Bus_Station_16\\ExpensesWebServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+        "projectUniqueName": "C:\\Users\\globa\\OneDrive\\Документы\\C#\\Expenses\\ExpensesWebServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
         "projectName": "ExpensesWebServer",
-        "projectPath": "C:\\Users\\globa\\Documents\\c_hashtag\\httpsgithub.comAvtoBBusBus_Station_16\\Bus_Station_16\\ExpensesWebServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+        "projectPath": "C:\\Users\\globa\\OneDrive\\Документы\\C#\\Expenses\\ExpensesWebServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
         "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\globa\\Documents\\c_hashtag\\httpsgithub.comAvtoBBusBus_Station_16\\Bus_Station_16\\ExpensesWebServer\\ExpensesWebServer\\obj\\",
+        "outputPath": "C:\\Users\\globa\\OneDrive\\Документы\\C#\\Expenses\\ExpensesWebServer\\ExpensesWebServer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,9 +40,35 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.3, )"
             }
           },
           "imports": [
@@ -69,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
