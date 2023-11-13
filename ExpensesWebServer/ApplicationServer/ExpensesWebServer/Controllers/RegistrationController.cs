@@ -21,19 +21,6 @@ namespace ExpensesWebServer.Controllers
             _logger = logger;
             _userRepository = repository;
         }
-        // Endpoint для регитсрации
-        /*[HttpPost]
-        public async Task<IActionResult> Register(RegisterDTO dto)
-        {
-            var user = new User
-            {
-                Login = dto.Login,
-                Password = Crypto.HashPassword(dto.Password),
-                Expenses = new List<Expense>()
-            };
-            await _userRepository.CreateAsync(user);
-            return Created("success", user);
-        }*/
         [HttpPost]
         [Route("login")]
         public async Task<IActionResult> RegisterLogin(RegisterDTO dto)

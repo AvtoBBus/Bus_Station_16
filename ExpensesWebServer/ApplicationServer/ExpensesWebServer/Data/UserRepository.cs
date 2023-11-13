@@ -1,6 +1,5 @@
 ﻿using ExpensesWebServer.Models.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 
 namespace ExpensesWebServer.Data
 {
