@@ -3250,11 +3250,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\globa\\OneDrive\\Документы\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+      "projectUniqueName": "C:\\Users\\globa\\OneDrive\\Документы\\C#\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
       "projectName": "ExpensesWebServer",
-      "projectPath": "C:\\Users\\globa\\OneDrive\\Документы\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+      "projectPath": "C:\\Users\\globa\\OneDrive\\Документы\\C#\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
       "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\globa\\OneDrive\\Документы\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\obj\\",
+      "outputPath": "C:\\Users\\globa\\OneDrive\\Документы\\C#\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config"
