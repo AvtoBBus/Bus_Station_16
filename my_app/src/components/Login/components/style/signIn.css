@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "roboto";
+    src: url("fonts/RobotoMono-VariableFont_wght.ttf");
+}
+
+label {
+    font-size: 15px;
+}
+
+input {
+    width: 328px;
+    height: 30px;
+}
+
+.signInContainer {
+    position: absolute;
+    top: 30px;
+    left: 590px;
+    width: 480px;
+    height: 480px;
+    border-radius: 30px;
+    background-color: #7470A3;
+}
+
+.containerName {
+    position: relative;
+    top: 22px;
+    left: 67px;
+    color: rgb(228, 228, 228);
+    text-shadow: 3px 3px 3px #43415f;
+}
+
+.signIN {
+    top: 0px;
+    left: 95px;
+}
+
+
+.labelInput {
+    position: relative;
+    font-size: 20px;
+}
+
+.loginSignIN {
+    top: 170px;
+    left: 25px;
+}
+
+.passwordSignIN {
+    top: 183px;
+    left: 25px;
+}
+
+.loginInput {
+    font-family: "roboto";
+    font-size: 18px;
+    position: relative;
+    border-radius: 15px;
+    color: rgb(228, 228, 228);
+    border: 2px solid #43415f;
+    background-color: #43415f;
+}
+
+.userSignIN {
+    width: 343px;
+    top: 169px;
+    left: 29px;
+}
+
+.passSignIN {
+    width: 328px;
+    top: 185px;
+    left: 29px;
+}
+
+.loginButtonSignIN {
+    position: relative;
+    top: 220px;
+    left: 100px;
+    width: 300px;
+    height: 50px;
+    background-color: #43415f;
+    color: rgb(228, 228, 228);
+    font-size: 20px;
+    border-radius: 25px;
+}

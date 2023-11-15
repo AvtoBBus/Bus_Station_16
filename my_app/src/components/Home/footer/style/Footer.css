@@ -1,6 +1,9 @@
 .footer {
-    flex: 0 0 auto;
+    position: absolute;
+    top: 843px;
+    left: 10px;
     height: 130px;
+    width: 100%;
     display: flex;
     margin: auto -10px -8px -10px;
     background-color: rgb(140, 127, 255);

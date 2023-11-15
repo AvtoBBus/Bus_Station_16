@@ -1,0 +1,30 @@
+@keyframes expensesFilter {
+    from {
+        color: #d5d4e1;
+    }
+
+    to {
+        color: #a199ff;
+    }
+
+}
+
+.expensesFilter {
+    position: absolute;
+    left: 503px;
+    top: 169px;
+    width: 286px;
+    height: 39px;
+    background-color: #514B99;
+    border: 2px solid #514B99;
+    border-radius: 7px;
+    color: #d5d4e1;
+    font-size: 20px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.expensesFilter:hover {
+    transition-duration: 0.2s;
+    color: #a199ff;
+}
