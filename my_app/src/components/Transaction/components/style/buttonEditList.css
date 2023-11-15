@@ -1,0 +1,26 @@
+@keyframes buttonEditList {
+    from {
+        color: #d5d4e1;
+    }
+
+    to {
+        color: #a199ff;
+    }
+
+}
+
+.buttonEditList {
+    width: 360px;
+    height: 60px;
+    background-color: #514B99;
+    border: 2px solid #514B99;
+    border-radius: 7px;
+    color: #d5d4e1;
+    font-size: 30px;
+    transition: all 0.2s ease;
+}
+
+.buttonEditList:hover {
+    transition-duration: 0.2s;
+    color: #a199ff;
+}

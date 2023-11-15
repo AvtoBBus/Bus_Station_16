@@ -1,0 +1,14 @@
+.userName {
+    font-size: 18px;
+    position: absolute;
+    left: 1720px;
+    top: 110px;
+}
+
+.signOutButton {
+    position: absolute;
+    left: 1720px;
+    top: 160px;
+    width: max-content;
+    height: 50px;
+}

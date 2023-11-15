@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "agbalumo";
+    src: url("fonts/Agbalumo-Regular.ttf");
+}
+
+
+.expensesLabel {
+    font-family: "agbalumo";
+    margin: auto;
+    font-size: 150px;
+    color: rgb(226, 226, 226);
+    text-shadow: 3px 3px 3px #43415f;
+}
+
+.container {
+    position: absolute;
+    left: 410px;
+    top: 226px;
+    width: 1100px;
+    height: 540px;
+    border-radius: 30px;
+    background-color: #928DCC;
+}
