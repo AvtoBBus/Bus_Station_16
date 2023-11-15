@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "q6kSOJBRDpxmJIZ2nQz+V8S1O06kJERZRZM4vNuqrqs=",
+  "Source": "ExpensesWebServer",
+  "BasePath": "_content/ExpensesWebServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
