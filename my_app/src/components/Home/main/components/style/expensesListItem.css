@@ -21,7 +21,7 @@ p {
     position: relative;
     top: 70px;
     left: 410px;
-    width: max-content;
+    width: 156px;
     height: max-content;
     border: 2px solid #20202063;
     border-radius: 10px;
@@ -34,6 +34,11 @@ p {
     font-size: 30px;
 }
 
+.itemMoneyText {
+    font-size: 22px;
+    color: #645add;
+}
+
 .itemMoney {
     font-size: 25px;
 }
@@ -43,13 +48,14 @@ p {
     left: 215px;
     top: 0px;
     font-size: 25px;
+    width: 190px;
 }
 
 .itemDateContainer {
     position: relative;
     top: -90px;
     left: 60px;
-    width: max-content;
+    width: 88px;
     height: max-content;
     border: 2px solid #20202063;
     border-radius: 10px;

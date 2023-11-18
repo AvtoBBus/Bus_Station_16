@@ -7,33 +7,32 @@ import useAuth from "../../../utils/hooks/useAuth"
 
 const SignUp = (props) => {
 
-
-
-    // let headers = new Headers();
-    // headers.append('Content-Type', 'application/json');
-    // headers.append('Accept', 'application/json');
-    // headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
-    // headers.append('Access-Control-Allow-Credentials', 'true');
-
-
-    // headers.append('GET', 'POST', 'OPTIONS');
-
-
-
     const [userName, setUserName] = useState("")
     const { signIn } = useAuth();
+    const [startReqDB, setStartReqDB] = useState(false)
     const navigate = useNavigate();
 
     const changeNameHandler = (event) => {
         setUserName(event.target.value);
     }
 
+
+
     const requestDB = (event) => {
         event.preventDefault();
         console.log("signup");
-        if (userName.length) {
-            signIn({ userName: userName, auth: true }, () => navigate("/", { replace: true }));
-        }
+
+        fetch('https://localhost:7215/testController/testEndpoint') // Replace with your API endpoint
+            .then(response => {
+                if (response.ok) {
+                    signIn({ userName: userName, auth: true }, () => navigate("/", { replace: true }));
+                }
+            })
+            .catch(error => {
+                console.log(error.message);
+            });
+
+
     }
 
     return <>
