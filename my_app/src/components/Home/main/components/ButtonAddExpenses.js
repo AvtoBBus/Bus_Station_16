@@ -2,7 +2,7 @@ import "./style/buttonAddExpenses.css"
 
 const ButtonAddExpenses = (props) => {
     return <>
-        <button className="buttonAddExpenses" style={props.style}>
+        <button className="buttonAddExpenses" onClick={props.addItem} style={props.style}>
             Добавить расход
         </button>
     </>

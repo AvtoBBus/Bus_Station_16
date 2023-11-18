@@ -7,7 +7,6 @@ import { AuthProvider } from "./utils/AuthProvider";
 import Transaction from "./components/Transaction/Transaction";
 import { useState } from "react";
 
-
 function App() {
 
   const dateNow = new Date();
@@ -118,6 +117,28 @@ function App() {
     },
   ]);
 
+
+  const deleteElem = (elemIndex) => {
+    setExpensesList(expensesList.filter(item => item.expensesID !== elemIndex));
+  }
+
+  const addElem = (newElem) => {
+    let vedro = [...expensesList]
+    vedro.push({
+      expensesID: expensesList.length,
+      description: newElem.description,
+      price: newElem.price,
+      category: newElem.category,
+      date: {
+        year: newElem.date.year,
+        month: months[Number(newElem.date.month) - 1],
+        day: newElem.date.day,
+      }
+    }
+    );
+    setExpensesList(vedro);
+  }
+
   return <>
     <AuthProvider>
       <div className="app">
@@ -130,7 +151,7 @@ function App() {
 
           <Route path="/transaction" element={
             <PrivateRoute>
-              <Transaction expList={expensesList} />
+              <Transaction expList={expensesList} deleteElemByIndex={deleteElem} addElemInList={addElem} />
             </PrivateRoute>
           }></Route>
 
