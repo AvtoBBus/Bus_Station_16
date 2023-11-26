@@ -22,32 +22,50 @@ namespace ExpensesWebServer.Controllers
             _userRepository = repository;
         }
         [HttpPost]
-        [Route("login")]
-        public async Task<IActionResult> RegisterLogin(RegisterDTO dto)
+        [Route("init")]
+        public async Task<IActionResult> LoginInit(string login)
+        /*
+         * Метод для инициализации нового юзера.
+         * Создает запись в бд с логином и генерирует соль
+         * Соль возвращает в клиент
+         */
         {
             var vulnerableUser = new User
             {
-                Login = dto.Login,
-                Password = string.Empty,
-                Salt = BCrypt.Net.BCrypt.GenerateSalt(),
-                Expenses = new List<Expense>()
+                UserLogin = login,
+                UserPassword = string.Empty,
+                Salt = BCrypt.Net.BCrypt.GenerateSalt()
             };
-            await _userRepository.CreateAsync(vulnerableUser);
-            return Created("success", vulnerableUser);
+            try
+            {
+                await _userRepository.CreateAsync(vulnerableUser);
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError($"Ошибка создания сущности пользователя.\nСообщение ошибки:{ex.Message}\n");
+                return BadRequest($"Ошибка создания сущности пользователя.");
+            }
+            return Created("success",vulnerableUser.Salt);
         }
         [HttpPost]
-        [Route("hashPassword")]
-        public async Task<IActionResult> RegisterHas(RegisterDTO dto)
+        [Route("confirm")]
+        public async Task<IActionResult> RegisterHas(UserDTO dto)
+        /*
+         * Метод принимает логин и хэш пароля
+         * По завершении в бд есть юзер с логином, паролем и собственной солью
+         */
         {
-            var vulnerableUser = await _userRepository.GetByLoginAsync(dto.Login);
+            User vulnerableUser = await _userRepository.GetByLoginAsync(dto.Login);
             if (vulnerableUser == null) 
             {
-                _logger.LogError("При добавлении хэша ,при регитсрации, не был найден логин в базе");
+                _logger.LogError("Пользователь не найден.\n");
                 return NotFound(dto); 
             }
-            vulnerableUser.Password = dto.Password;
+            vulnerableUser.UserPassword = dto.Password;
 
-            return Created("success", vulnerableUser);
+            _userRepository.Update(vulnerableUser);
+
+            return Ok("success");
         }
     }
 }

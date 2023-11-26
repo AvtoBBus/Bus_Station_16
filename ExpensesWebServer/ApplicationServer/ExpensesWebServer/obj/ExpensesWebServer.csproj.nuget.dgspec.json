@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {}
+    "C:\\Users\\globa\\Documents\\c_hashtag\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {
+    "C:\\Users\\globa\\Documents\\c_hashtag\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+        "projectUniqueName": "C:\\Users\\globa\\Documents\\c_hashtag\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
         "projectName": "ExpensesWebServer",
-        "projectPath": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+        "projectPath": "C:\\Users\\globa\\Documents\\c_hashtag\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
         "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\obj\\",
+        "outputPath": "C:\\Users\\globa\\Documents\\c_hashtag\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -66,6 +66,12 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

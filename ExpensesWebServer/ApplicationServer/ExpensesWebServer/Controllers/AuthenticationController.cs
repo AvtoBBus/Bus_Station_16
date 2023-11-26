@@ -24,22 +24,38 @@ namespace ExpensesWebServer.Controllers
             _jwtService = jwtService;
         }
         [HttpPost]
-        [Route("login/login")]
-        public async Task<IActionResult> LoginLogin(string login)
+        [Route("login/init")]
+        public async Task<IActionResult> LoginInit(string login)
+        /*
+        * Метод нужен для передачи salt клиенту, чтобы он мог сгенерировать хэш пароля
+        */
         {
             var user = await _userRepository.GetByLoginAsync(login);
-            if (user == null) return BadRequest(new { message = "Wrong login" });
+            if (user == null)
+            {
+                _logger.LogWarning("Пользователь не найден.");
+                return NotFound(login);
+            }
 
             return Ok(user);
         }
         [HttpPost]
-        [Route("login/hashPassword")]
-        public async Task<IActionResult> LoginHashPassword(LoginDTO dto)
+        [Route("login/confirm")]
+        public async Task<IActionResult> LoginConfirm(UserDTO dto)
+        /*
+         * Метод принимает хэш пароля и проверяет данные на корректность
+         * В случае верных данных возвращает jwt-cookies
+         */
         {
             var user = await _userRepository.GetByLoginAsync(dto.Login);
 
-            if (user == null) return BadRequest(new { message = "Wrong login" });
-            if (!BCrypt.Net.BCrypt.Verify(dto.Password, user.Password)) return BadRequest(new { message = "Wrong password" });
+            if (user == null)
+            {
+                _logger.LogWarning("Пользователь не найден.");
+                return NotFound(dto);
+            }
+
+            if (user.UserPassword != dto.Password) return BadRequest("Неверный пароль");
 
             var token = _jwtService.generate(user.Id);
             Response.Cookies.Append("jwt", token, new CookieOptions
@@ -47,13 +63,24 @@ namespace ExpensesWebServer.Controllers
                 HttpOnly = true
             });
 
-            return Ok(new { message = "success" });
+            return Ok();
         }
         [HttpPost("logout")]
         public IActionResult Logout()
+        /*
+         * Отнимает у юзера jwt-cookies => лешает доступа
+         */
         {
-            Response.Cookies.Delete("jwt");
-            return Ok(new { message = "success"});
+            try
+            {
+                Response.Cookies.Delete("jwt");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Ошибка удаления JWT token\nСообщение: {ex.Message}");
+                return BadRequest("Ошибка удаления JWT token");
+            }
+            return Ok();
         }
     }
 }

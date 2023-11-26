@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XMHGfLhdhtQt6dF5oKkKG9dMEN1Q1g1LEJmt6cR1ZH+1WDIA1YRg1mN18HOxyEWn6AK7RuvHY/+b2NJEAMACSw==",
+  "dgSpecHash": "sCekP6UKoiU06ECv5z8uH3q0Ipx9kT07R+IwDdGzbG1eQBtqFU4afGtrqRhK8VQyBOrxxpzeu5NkLYZCZftWNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+  "projectFilePath": "C:\\Users\\globa\\Documents\\c_hashtag\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\globa\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\globa\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -21,6 +21,7 @@
     "C:\\Users\\globa\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.13\\microsoft.entityframeworkcore.design.7.0.13.nupkg.sha512",
     "C:\\Users\\globa\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.13\\microsoft.entityframeworkcore.relational.7.0.13.nupkg.sha512",
     "C:\\Users\\globa\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.13\\microsoft.entityframeworkcore.sqlserver.7.0.13.nupkg.sha512",
+    "C:\\Users\\globa\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.5\\microsoft.entityframeworkcore.tools.7.0.5.nupkg.sha512",
     "C:\\Users\\globa\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\globa\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\globa\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
