@@ -9,6 +9,7 @@ const ExpensesList = (props) => {
 
     const [expensesList, setExpensesList] = useState(props.expList)
 
+    console.log(props)
 
     let filteredList = []
     if (props.filterValue !== "nothing") {
@@ -33,7 +34,7 @@ const ExpensesList = (props) => {
                     <p className="itemDescription">{convertStr(item.description)}</p>
                     <p className="itemMoney">Money: {item.price}</p>
                 </div>
-                <p className="itemCategory">Category:<br /><b>{Object.keys(props.filterConverter)[Object.values(props.filterConverter).indexOf(item.category)]}</b></p>
+                <p className="itemCategory">Category:<br /><b>{convertStr(Object.keys(props.filterConverter)[Object.values(props.filterConverter).indexOf(item.category)])}</b></p>
                 <div className='itemDateContainer'>
                     <p className="itemYear">{item.date.year}</p>
                     <p className="itemMonth">{item.date.month}</p>

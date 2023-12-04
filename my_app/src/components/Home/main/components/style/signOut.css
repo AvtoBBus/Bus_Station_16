@@ -1,14 +1,51 @@
-.userName {
-    font-size: 18px;
+.signOutContainer {
     position: absolute;
-    left: 1720px;
-    top: 110px;
+    left: 1670px;
+    top: 100px;
+    background-color: #928dcc;
+    padding: 20px;
+    border-radius: 30px;
 }
 
+.userName {
+    font-size: 18px;
+    color: aliceblue;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Name {
+    font-size: 35px;
+    color: #645add;
+    text-shadow: 0px 0px 7px #ffffff59;
+}
+
+
 .signOutButton {
-    position: absolute;
-    left: 1720px;
-    top: 160px;
     width: max-content;
     height: 50px;
+    margin-top: 7px;
+    background-color: #bebbe0;
+    border: 2px solid #928dcc;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.signOutButton:hover {
+    color: rgb(235, 233, 255);
+    background-color: #514B99;
+}
+
+
+@keyframes signOutButton {
+    from {
+        background-color: #bebbe0;
+    }
+
+    to {
+        color: rgb(235, 233, 255);
+        background-color: #514B99;
+    }
+
 }

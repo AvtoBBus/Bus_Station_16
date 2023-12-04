@@ -1,5 +1,6 @@
 ﻿using ExpensesWebServer.Data;
 using ExpensesWebServer.Models.DTOs;
+using ExpensesWebServer.Models.Entities;
 using ExpensesWebServer.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,7 +10,7 @@ namespace ExpensesWebServer.Controllers
      * Контроллер для аутентификации и авторизации пользователя.
      * Используется JWT-cookie с флагом http only.
      */
-    [Route("authentication")]
+    [Route("auth")]
     [ApiController]
     public class AuthenticationController : Controller
     {
@@ -30,13 +31,17 @@ namespace ExpensesWebServer.Controllers
         */
         {
             var user = await _userRepository.GetByLoginAsync(login);
-            if (user == null) return BadRequest(new { message = "Wrong login" });
+            if (user == null)
+            {
+                _logger.LogWarning("Пользователь не найден.");
+                return NotFound(login);
+            }
 
             return Ok(user);
         }
         [HttpPost]
         [Route("login/confirm")]
-        public async Task<IActionResult> LoginInit(LPDTO dto)
+        public async Task<IActionResult> LoginConfirm(UserDTO dto)
         /*
          * Метод принимает хэш пароля и проверяет данные на корректность
          * В случае верных данных возвращает jwt-cookies
@@ -44,9 +49,13 @@ namespace ExpensesWebServer.Controllers
         {
             var user = await _userRepository.GetByLoginAsync(dto.Login);
 
-            if (user == null) return BadRequest(new { message = "Login not found" });
+            if (user == null)
+            {
+                _logger.LogWarning("Пользователь не найден.");
+                return NotFound(dto);
+            }
 
-            if (user.Password != dto.Password) return BadRequest(new { message = "Wrong password" });
+            if (user.UserPassword != dto.Password) return BadRequest("Неверный пароль");
 
             var token = _jwtService.generate(user.Id);
             Response.Cookies.Append("jwt", token, new CookieOptions
@@ -54,7 +63,7 @@ namespace ExpensesWebServer.Controllers
                 HttpOnly = true
             });
 
-            return Ok(new { message = "success" });
+            return Ok();
         }
         [HttpPost("logout")]
         public IActionResult Logout()
@@ -62,8 +71,16 @@ namespace ExpensesWebServer.Controllers
          * Отнимает у юзера jwt-cookies => лешает доступа
          */
         {
-            Response.Cookies.Delete("jwt");
-            return Ok(new { message = "success"});
+            try
+            {
+                Response.Cookies.Delete("jwt");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Ошибка удаления JWT token\nСообщение: {ex.Message}");
+                return BadRequest("Ошибка удаления JWT token");
+            }
+            return Ok();
         }
     }
 }

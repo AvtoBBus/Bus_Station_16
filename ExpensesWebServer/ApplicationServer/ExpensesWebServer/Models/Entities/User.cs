@@ -1,4 +1,6 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ExpensesWebServer.Models.Entities
 {
@@ -7,16 +9,20 @@ namespace ExpensesWebServer.Models.Entities
      */
     public class User
     {
+
         // Поле Id является UID для User
+        [Required]
+        [Key]
         public int Id { get; set; }
         // Логин User'a является уникальным
-        public string Login { get; set; }
+        [Required]
+        public string UserLogin { get; set; }
         // Пароль пользователя. Требования: https://support.kaspersky.com/KPC/1.0/ru-RU/183862.html
+        [Required]
         [JsonIgnore]
-        public string Password { get; set; }
+        public string UserPassword { get; set; }
+        [Required]
         public string Salt { get; set; }
         // Список трат содердится и обновляется с каждым месяцем.
-        // 
-        public List<Expense> Expenses { get; set; }
     }
 }

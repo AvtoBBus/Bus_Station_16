@@ -7,7 +7,11 @@ const Transaction = (props) => {
     return <>
         <Header />
         <SignOut />
+<<<<<<< Updated upstream
         <TransactionMainContent expList={props.expList} />
+=======
+        <TransactionMainContent expList={props.expList} deleteElemByIndex={props.deleteElemByIndex} addElemInList={props.addElemInList} filterConverter={props.filterConverter} />
+>>>>>>> Stashed changes
         <Footer />
     </>
 }

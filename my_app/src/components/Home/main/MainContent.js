@@ -7,21 +7,7 @@ import SignOut from "./components/SignOut";
 import { Link } from "react-router-dom";
 
 const MainContent = (props) => {
-    const filterConverter = {
-        "Фильтр": "nothing",
-        "Автомобиль": "auto",
-        "Одежда": "clothes",
-        "Продукты": "food",
-        "Здоровье": "health",
-        "Уход за собой": "selfCare",
-        "Спорт": "sport",
-        "Кафе и рестораны": "cafe",
-        "Электроника": "electronics",
-        "Дом, ремонт": "home",
-        "Транспорт": "transport",
-        "Путешествия": "travel",
-        "Прочее": "other",
-    }
+
 
     const [filterValue, setFilterValue] = useState("Фильтр");
 
@@ -36,8 +22,8 @@ const MainContent = (props) => {
                 <ButtonAddExpenses />
             </Link>
             <SignOut />
-            <ExpensesFilter filterConverter={filterConverter} onChangeCurrentFilter={currentFilterChanged} />
-            <ExpensesList expList={props.expList} filterConverter={filterConverter} filterValue={filterConverter[filterValue]} />
+            <ExpensesFilter filterConverter={props.filterConverter} onChangeCurrentFilter={currentFilterChanged} />
+            <ExpensesList expList={props.expList} filterConverter={props.filterConverter} filterValue={props.filterConverter[filterValue]} />
         </div>
     </>
 }

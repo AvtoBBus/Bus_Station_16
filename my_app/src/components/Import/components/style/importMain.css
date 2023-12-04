@@ -1,0 +1,86 @@
+.importMainContent {
+    height: 843px;
+    background-color: rgb(235, 233, 255);
+}
+
+
+.changeDateRangeContainer {
+    position: absolute;
+    top: 156px;
+    left: 141px;
+}
+
+.changeDataRange {
+    width: max-content;
+    height: 139px;
+    background-color: #928DCC;
+    color: #d5d4e1;
+    font-size: 50px;
+    border: 2px solid #928DCC;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.buttonGetTable {
+    position: absolute;
+    top: 715px;
+    left: 255px;
+    width: 512px;
+    height: 95px;
+    font-size: 30px;
+    color: #d5d4e1;
+    background-color: #928DCC;
+    border: 0px solid #928DCC;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+}
+
+.buttonGetTable:hover {
+    transition-duration: 0.2s;
+    color: #a199ff;
+}
+
+
+@keyframes buttonGetTable {
+    from {
+        color: #d5d4e1;
+    }
+
+    to {
+        color: #a199ff;
+    }
+
+}
+
+.dateInput {
+    position: absolute;
+    width: max-content;
+    font-size: 35px;
+    height: 95px;
+}
+
+.from {
+    top: 200px;
+    left: 400px;
+}
+
+.to {
+    top: 368px;
+    left: 400px;
+}
+
+.textInput {
+    position: absolute;
+    width: max-content;
+    font-size: 35px;
+}
+
+.start {
+    top: 230px;
+    left: 120px;
+}
+
+.end {
+    top: 398px;
+    left: 120px;
+}

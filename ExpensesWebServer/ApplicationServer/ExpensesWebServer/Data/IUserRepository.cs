@@ -2,10 +2,9 @@
 
 namespace ExpensesWebServer.Data
 {
-    public interface IUserRepository
+    public interface IUserRepository: IRepository<User>
     {
-        public Task<int> CreateAsync(User user);
-        public Task<User> GetByLoginAsync(string user);
+        public Task<User> GetByLoginAsync(string login);
         public Task<User> GetByIdAsync(int id);
     }
 }
