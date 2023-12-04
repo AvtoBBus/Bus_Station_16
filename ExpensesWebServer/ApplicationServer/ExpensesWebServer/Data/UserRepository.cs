@@ -20,7 +20,7 @@ namespace ExpensesWebServer.Data
 
         public User Update(User entity)
         {
-            var dbEntity = _context.Expenses.FirstOrDefault(ex => ex.Id == entity.Id);
+            var dbEntity = _context.Users.FirstOrDefault(ex => ex.Id == entity.Id);
             if (dbEntity == null) throw new ArgumentException($"User with id =={entity.Id} not found");
             _context.Users.Update(entity);
             _context.SaveChanges();
@@ -29,9 +29,9 @@ namespace ExpensesWebServer.Data
 
         public void Delete(int id)
         {
-            var entity = _context.Expenses.FirstOrDefault(u => u.Id == id);
+            var entity = _context.Users.FirstOrDefault(u => u.Id == id);
             if (entity == null) throw new ArgumentException($"User with id =={id} not found");
-            _context.Expenses.Remove(entity);
+            _context.Users.Remove(entity);
             _context.SaveChanges();
         }
         public async Task<User> GetByLoginAsync(string login)

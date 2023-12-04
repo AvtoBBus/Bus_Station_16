@@ -4,11 +4,6 @@ import { useState } from "react"
 import ButtonAddExpenses from "../../Home/main/components/ButtonAddExpenses";
 import ButtonEditList from "./ButtonEditList";
 import "./style/transactionMainContent.css"
-<<<<<<< Updated upstream
-=======
-import AddItem from "./AddItem";
-import BlockEmailOn from "./BlockEmailOn";
->>>>>>> Stashed changes
 
 const TransactionMainContent = (props) => {
 
@@ -30,17 +25,7 @@ const TransactionMainContent = (props) => {
             <div style={{ position: "absolute", left: 727, top: 151 }}>
                 <ButtonEditList />
             </div>
-<<<<<<< Updated upstream
-            <ExpensesListTransaction expList={props.expList} filterValue={filterConverter[filterValue]} filterConverter={filterConverter} />
-=======
-            {
-                (listStyle.display == "none") ?
-                    <AddItem filterConverter={props.filterConverter} addElemInList={props.addElemInList} closeAddMenu={closeAddMenuHandler} /> :
-                    <></>
-            }
-            <ExpensesListTransaction deleteElemByIndex={props.deleteElemByIndex} editFlag={editList} expList={props.expList} filterValue={props.filterConverter[filterValue]} filterConverter={props.filterConverter} style={listStyle} />
-            <BlockEmailOn />
->>>>>>> Stashed changes
+            <ExpensesListTransaction expList={props.expList} filterValue={props.filterConverter[filterValue]} filterConverter={props.filterConverter} />
         </div>
     </>
 }
