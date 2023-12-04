@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uOioxJhZfQQV1IRLAGsl/c541ZkfaN7OxmLlJ7Lo7XYAmr4x4OJ3VicLD5bGDkMIeRGm2K5mh79P+7uSC/KRVA==",
+  "dgSpecHash": "uXjqqLdFrr+WsWCg43J7O94hPuAJOcST0WISF7rdMjhVPtGq/uFms9N3bMH+9HoUEE7NH9+xkxZaONaLuCL+GQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+  "projectFilePath": "E:\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\globa\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\globa\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

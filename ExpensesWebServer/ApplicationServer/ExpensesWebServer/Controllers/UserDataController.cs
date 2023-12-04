@@ -24,7 +24,6 @@ namespace ExpensesWebServer.Controllers
             _expenseReposirity = expensesRepository;
             _jwtService = jwtService;
         }
-        private string formatDate(DateTime date) => date.ToString("yyyy-MM-dd HH:mm");
         private JwtSecurityToken JwtSecurityToken()
         {
             JwtSecurityToken verifiedJWT;
@@ -110,7 +109,7 @@ namespace ExpensesWebServer.Controllers
                 _logger.LogError($"Ошибка создания  записи траты\nСообщение:{ex.Message}");
                 return BadRequest("Ошибка создания  записи траты");
             }
-            return Ok(dto);
+            return Ok(expense);
         }
         [HttpPost]
         [Route("[controller]/delete/{id}")]
