@@ -12,7 +12,6 @@ const MainContent = (props) => {
     const [filterValue, setFilterValue] = useState("Фильтр");
 
     const currentFilterChanged = (currentFilter) => {
-        console.log(currentFilter);
         setFilterValue(currentFilter);
     }
 
