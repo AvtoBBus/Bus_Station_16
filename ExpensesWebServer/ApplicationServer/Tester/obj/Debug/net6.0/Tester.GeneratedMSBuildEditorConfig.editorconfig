@@ -8,10 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Tester
-<<<<<<< HEAD
 build_property.ProjectDir = E:\C#\Expenses\ExpensesWebServer\ApplicationServer\Tester\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-=======
-build_property.ProjectDir = D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\Tester\
->>>>>>> upstream/main
