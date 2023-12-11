@@ -1,0 +1,2 @@
+C:\Users\globa\Documents\c_hashtag\Bus_Station_16\ExpensesWebServer\ApplicationServer\BankProcessor\obj\Debug\BankProcessor.csproj.AssemblyReference.cache
+C:\Users\globa\Documents\c_hashtag\Bus_Station_16\ExpensesWebServer\ApplicationServer\BankProcessor\obj\Debug\BankProcessor.csproj.CoreCompileInputs.cache

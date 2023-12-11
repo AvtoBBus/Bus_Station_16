@@ -1,0 +1,10 @@
+.expensesCircleDiagram {
+    position: absolute;
+    left: 970px;
+    top: 232px;
+    width: 575px;
+    height: 575px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #bebbe054;
+}

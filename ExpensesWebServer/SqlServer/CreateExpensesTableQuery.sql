@@ -9,4 +9,8 @@ create table Expenses(
 );
 
 insert into Expenses(UserId,ExpenseDescription,Amount,CreationDate,Category)
+<<<<<<< HEAD
 values(1,'�������� ������ ��� ������������ Andrey', 1924.00,GETDATE(), 0)
+=======
+values(1,'test', 1924.00,GETDATE(), 0)
+>>>>>>> upstream/main

@@ -1,0 +1,83 @@
+p {
+    margin: 0;
+}
+
+.expensesListItem {
+    background-color: #ffffff66;
+    border-radius: 30px;
+    height: 230px;
+    width: 580px;
+    margin: 0px 0px 10px 0px;
+    color: #202020;
+}
+
+.expensesListWall {
+    background-color: #20202063;
+    border-radius: 30px;
+    width: 30px;
+}
+
+.itemRightContent {
+    position: relative;
+    top: 70px;
+    left: 410px;
+    width: 156px;
+    height: max-content;
+    border: 2px solid #20202063;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.itemDescription {
+    font-size: 30px;
+}
+
+.itemMoneyText {
+    font-size: 22px;
+    color: #645add;
+}
+
+.itemMoney {
+    font-size: 25px;
+}
+
+.itemCategory {
+    position: relative;
+    left: 215px;
+    top: 0px;
+    font-size: 25px;
+    width: 190px;
+}
+
+.itemDateContainer {
+    position: relative;
+    top: -90px;
+    left: 60px;
+    width: 88px;
+    height: max-content;
+    border: 2px solid #20202063;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #645add;
+    background-color: #ebe9ff75;
+    box-shadow: 3px 3px 3px #202020;
+}
+
+.itemYear {
+    position: relative;
+    font-size: 25px;
+}
+
+.itemMonth {
+    position: relative;
+    font-size: 28px;
+}
+
+.itemDay {
+    position: relative;
+    font-size: 28px;
+}

@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "E:\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "E:\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj",
         "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
         "outputPath": "E:\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\obj\\",
+=======
+    "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj": {}
+  },
+  "projects": {
+    "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj",
+        "projectName": "CsvImportProcessorsLibrary",
+        "projectPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj",
+        "packagesPath": "C:\\Users\\miste\\.nuget\\packages\\",
+        "outputPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\obj\\",
+>>>>>>> upstream/main
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\miste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> upstream/main
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +50,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "E:\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {
                 "projectPath": "E:\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj"
+=======
+              "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {
+                "projectPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj"
+>>>>>>> upstream/main
               }
             }
           }
@@ -73,6 +96,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
@@ -85,12 +109,30 @@
         "projectPath": "E:\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
         "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
         "outputPath": "E:\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\obj\\",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+        "projectName": "ExpensesWebServer",
+        "projectPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+        "packagesPath": "C:\\Users\\miste\\.nuget\\packages\\",
+        "outputPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\obj\\",
+>>>>>>> upstream/main
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\miste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> upstream/main
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -173,6 +215,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
@@ -185,12 +228,30 @@
         "projectPath": "E:\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj",
         "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
         "outputPath": "E:\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\Tester\\obj\\",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj",
+        "projectName": "Tester",
+        "projectPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj",
+        "packagesPath": "C:\\Users\\miste\\.nuget\\packages\\",
+        "outputPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\Tester\\obj\\",
+>>>>>>> upstream/main
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\miste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> upstream/main
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -205,8 +266,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "E:\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj": {
                 "projectPath": "E:\\C#\\Expenses\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj"
+=======
+              "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj": {
+                "projectPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj"
+>>>>>>> upstream/main
               }
             }
           }
@@ -236,7 +302,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+>>>>>>> upstream/main
         }
       }
     }

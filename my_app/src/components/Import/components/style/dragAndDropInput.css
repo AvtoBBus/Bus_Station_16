@@ -1,0 +1,32 @@
+.dragAndDropZone {
+    position: absolute;
+    top: 156px;
+    left: 159px;
+    width: 721px;
+    height: 363px;
+    background-color: #928DCC;
+    border-radius: 30px;
+    border: 0px solid #928DCC;
+    padding: 10px;
+    font-size: 30px;
+    color: rgb(56, 56, 56);
+}
+
+.dnd {
+    width: 705px;
+    height: 347px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.dragFile {
+    background-color: rgb(246, 245, 255);
+    border: 8px dashed rgb(152, 151, 159);
+}
+
+.dropFile {
+    background-color: rgb(207, 202, 255);
+    border: 8px dashed rgb(68, 67, 71);
+}

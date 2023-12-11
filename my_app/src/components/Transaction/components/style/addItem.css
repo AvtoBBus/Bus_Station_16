@@ -1,0 +1,115 @@
+.addItemContainer {
+    position: relative;
+    left: 190px;
+    top: 140px;
+    width: 1435px;
+    height: 572px;
+    background-color: #928DCC;
+    border-radius: 30px;
+}
+
+.inputBlock {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 680px;
+    height: 95px;
+    border-radius: 30px;
+    background-color: rgb(235, 233, 255);
+}
+
+.descriptionBlock {
+    left: 34px;
+    top: 24px;
+}
+
+.moneyBlock {
+    left: 34px;
+    top: 123px;
+}
+
+.categoryBlock {
+    left: 735px;
+    top: -166px;
+}
+
+.dateBlock {
+    left: 735px;
+    top: -67px;
+}
+
+.descriptionP {
+    position: relative;
+    left: 20px;
+    font-size: 30px;
+}
+
+.moneyP {
+    position: relative;
+    left: 20px;
+    font-size: 30px;
+}
+
+.categoryP {
+    position: relative;
+    left: 20px;
+    font-size: 30px;
+}
+
+.dateP {
+    position: relative;
+    left: 20px;
+    font-size: 30px;
+}
+
+.inputValue {
+    position: relative;
+    left: 31px;
+    border: 2px solid #514b9952;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: #00000021;
+}
+
+.descriptionValue {
+    width: 420px;
+}
+
+.moneyValue {
+    width: 430px;
+}
+
+.dateValue {
+    width: 400px;
+}
+
+.addButton {
+    position: relative;
+    top: 44px;
+    left: 33px;
+    height: 95px;
+    width: 1382px;
+    font-size: 35px;
+    border: 0px;
+    background-color: rgb(235, 233, 255);
+    border-radius: 30px;
+    transition: all 0.2s ease;
+}
+
+.addButton:hover {
+    transition-duration: 0.2s;
+    color: rgb(235, 233, 255);
+    background-color: #514B99;
+}
+
+@keyframes addButton {
+    from {
+        background-color: rgb(235, 233, 255);
+    }
+
+    to {
+        color: rgb(235, 233, 255);
+        background-color: #514B99;
+    }
+
+}
