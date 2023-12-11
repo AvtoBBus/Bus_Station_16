@@ -8,8 +8,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+<<<<<<< HEAD
+builder.Services.AddDbContext<Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+=======
 builder.Services.AddDbContext<Context>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("default")));
+>>>>>>> upstream/main
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IExpenseRepository,ExpeseRepository>();

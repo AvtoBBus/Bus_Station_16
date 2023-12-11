@@ -166,3 +166,7 @@ E:\C#\Expenses\ExpensesWebServer\ApplicationServer\Tester\obj\Debug\net6.0\refin
 E:\C#\Expenses\ExpensesWebServer\ApplicationServer\Tester\obj\Debug\net6.0\Tester.pdb
 E:\C#\Expenses\ExpensesWebServer\ApplicationServer\Tester\obj\Debug\net6.0\Tester.genruntimeconfig.cache
 E:\C#\Expenses\ExpensesWebServer\ApplicationServer\Tester\obj\Debug\net6.0\ref\Tester.dll
+<<<<<<< HEAD
+E:\C#\Expenses\ExpensesWebServer\ApplicationServer\Tester\obj\Debug\net6.0\Tester.sourcelink.json
+=======
+>>>>>>> upstream/main

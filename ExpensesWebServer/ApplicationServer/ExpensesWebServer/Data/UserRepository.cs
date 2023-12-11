@@ -29,9 +29,9 @@ namespace ExpensesWebServer.Data
 
         public void Delete(int id)
         {
-            var entity = _context.Users.FirstOrDefault(u => u.Id == id);
+            var entity = _context.Expenses.FirstOrDefault(u => u.Id == id);
             if (entity == null) throw new ArgumentException($"User with id =={id} not found");
-            _context.Users.Remove(entity);
+            _context.Expenses.Remove(entity);
             _context.SaveChanges();
         }
         public async Task<User> GetByLoginAsync(string login)

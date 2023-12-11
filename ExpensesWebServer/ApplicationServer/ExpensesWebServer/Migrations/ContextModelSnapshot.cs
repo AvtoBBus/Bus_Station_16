@@ -4,19 +4,16 @@ using ExpensesWebServer.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace ExpensesWebServer.Migrations
 {
-    [DbContext(typeof(UserContext))]
-    [Migration("20231111140020_NewUserEntity")]
-    partial class NewUserEntity
+    [DbContext(typeof(Context))]
+    partial class ContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,27 +24,33 @@ namespace ExpensesWebServer.Migrations
 
             modelBuilder.Entity("ExpensesWebServer.Models.Entities.Expense", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18,4)");
+
+                    b.Property<int>("Category")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("date");
 
-                    b.Property<string>("Type")
+                    b.Property<string>("ExpenseDescription")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("Category");
 
-                    b.ToTable("Expense");
+                    b.ToTable("Expenses");
                 });
 
             modelBuilder.Entity("ExpensesWebServer.Models.Entities.User", b =>
@@ -58,32 +61,35 @@ namespace ExpensesWebServer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Login")
+                    b.Property<string>("Salt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserLogin")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("UserPassword")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Login")
+                    b.HasAlternateKey("UserLogin");
+
+                    b.HasIndex("UserLogin")
                         .IsUnique();
 
                     b.ToTable("Users");
-                });
 
-            modelBuilder.Entity("ExpensesWebServer.Models.Entities.Expense", b =>
-                {
-                    b.HasOne("ExpensesWebServer.Models.Entities.User", null)
-                        .WithMany("Expenses")
-                        .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("ExpensesWebServer.Models.Entities.User", b =>
-                {
-                    b.Navigation("Expenses");
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Salt = "",
+                            UserLogin = "Tom",
+                            UserPassword = "test"
+                        });
                 });
 #pragma warning restore 612, 618
         }
