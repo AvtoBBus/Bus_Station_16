@@ -16,14 +16,14 @@ namespace ExpensesWebServer.Controllers
     {
         private ILogger _logger; // Логгер в stdout
         private IUserRepository _userRepository; // Интерфейс бд для работы с пользователем
-        public RegistrationController(ILogger<AuthenticationController> logger, IUserRepository repository)
+        public RegistrationController(ILogger<RegistrationController> logger, IUserRepository repository)
         {
             _logger = logger;
             _userRepository = repository;
         }
         [HttpPost]
         [Route("init")]
-        public async Task<IActionResult> LoginInit(string login)
+        public async Task<IActionResult> RegInit(string login)
         /*
          * Метод для инициализации нового юзера.
          * Создает запись в бд с логином и генерирует соль

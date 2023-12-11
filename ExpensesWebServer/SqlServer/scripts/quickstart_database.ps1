@@ -1,7 +1,7 @@
 $serverName = "localhost,1433"
 $databaseName = "master"
 $userId = "sa"
-$strongPsswd = "K@%P@/edl3T9S>CXe1TL3z##"
+$strongPsswd = "o*&KA&Ztq)I6=@&jSXAB,fV,"
 
 $connectionString = "Server=$serverName;Database=$databaseName;User Id=$userId;Password=$strongPsswd;TrustServerCertificate=True;"
 Write-Host $connectionString

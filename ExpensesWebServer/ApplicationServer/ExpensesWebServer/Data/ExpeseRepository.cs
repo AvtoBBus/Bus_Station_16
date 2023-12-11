@@ -1,6 +1,7 @@
 ﻿using ExpensesWebServer.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
+using System.Linq;
 
 namespace ExpensesWebServer.Data
 {
@@ -42,6 +43,14 @@ namespace ExpensesWebServer.Data
         }
 
         public Task<List<Expense>> GetListOfObjects() => _context.Expenses.ToListAsync();
+
+        public Task<List<Expense>> GetRangeByDates(DateTime start, DateTime stop)
+        {
+            var expenses = from expense in _context.Expenses where
+                           expense.CreationDate > start && expense.CreationDate < stop
+                           select expense;
+            return expenses.ToListAsync();
+        }
 
         public Expense Update(Expense entity)
         {
