@@ -44,9 +44,9 @@ const SignIn = (props) => {
         console.log("signup");
         if (checkInputName(userName)) {
             if (checkPass(userPass)) {
-                axios.interceptors.response.use(function (response) {
-                    return response;
-                })
+                // axios.interceptors.response.use(function (response) {
+                //     return response;
+                // })
                 axios.post(`http://localhost:5290/auth/login/init?login=${userName}`)
                     .then(response => {
                         if (response.status === 200) {
@@ -57,7 +57,7 @@ const SignIn = (props) => {
                                 withCredentials: true,
                                 data: JSON.stringify({
                                     "login": userName,
-                                    "password": response.data.salt + hmacSHA384(userPass, CryptoJS.PBKDF2(userPass, response.data.salt))
+                                    "password": hmacSHA384(userPass, CryptoJS.SHA384(response.data.salt)).toString()
                                 })
                             })
                                 .then(function (response) {
@@ -81,7 +81,7 @@ const SignIn = (props) => {
         }
     }
 
-    console.log("$2a$11$0EueAhdK1uIiN8BgiAHvv." + hmacSHA384("Test123", CryptoJS.PBKDF2("Test123", "$2a$11$0EueAhdK1uIiN8BgiAHvv.")))
+    // console.log("$2a$11$0EueAhdK1uIiN8BgiAHvv." + hmacSHA384("Test123", CryptoJS.PBKDF2("Test123", "$2a$11$0EueAhdK1uIiN8BgiAHvv.")))
 
     return <>
         <div className="signInContainer">

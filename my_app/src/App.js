@@ -7,6 +7,7 @@ import { AuthProvider } from "./utils/AuthProvider";
 import Transaction from "./components/Transaction/Transaction";
 import { useState } from "react";
 import ImportPage from "./components/Import/ImportPage";
+import ExportPage from "./components/Export/ExportPage";
 import axios from 'axios'
 
 
@@ -46,13 +47,13 @@ function App() {
 
   const [expensesList, setExpensesList] = useState([])
 
-  axios.interceptors.response.use(function (response) {
-    return response;
-  })
-  axios.interceptors.request.use(function (request) {
-    console.log(request);
-    return request;
-  })
+  // axios.interceptors.response.use(function (response) {
+  //   return response;
+  // })
+  // axios.interceptors.request.use(function (request) {
+  //   console.log(request);
+  //   return request;
+  // })
 
   const startGetListHandler = (userList) => {
     let vedro = [...expensesList]
@@ -104,14 +105,14 @@ function App() {
       data: JSON.stringify({
         "expenseDescription": newElem.description,
         "amount": newElem.price,
-        "creationDate": `${newElem.date.year}-${Number(newElem.date.month) - 1}-${newElem.date.day}T00:00:00.000Z`,
+        "creationDate": `${newElem.date.year}-${Number(newElem.date.month)}-${newElem.date.day}T00:00:00.000Z`,
         "category": Object.values(filterConverter).indexOf(newElem.category) - 1
       })
     })
       .then(response => {
         if (response.status === 200) {
           vedro.push({
-            expensesID: expensesList.length,
+            expensesID: response.data.id,
             description: newElem.description,
             price: newElem.price,
             category: newElem.category,
@@ -150,6 +151,12 @@ function App() {
           <Route path="/import" element={
             <PrivateRoute>
               <ImportPage />
+            </PrivateRoute>
+          }></Route>
+
+          <Route path="/export" element={
+            <PrivateRoute>
+              <ExportPage />
             </PrivateRoute>
           }></Route>
 

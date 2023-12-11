@@ -1,42 +1,36 @@
 import { useState } from "react";
 import "./style/importMain.css"
 import WarningContainer from "./WarningContainer"
+import DragAndDropInput from "./DragAndDropInput";
+import ShowUploadedFile from "./ShowUploadedFile"
+import ButtonAddToList from "./ButtonAddToList"
+
 
 const ImportMain = (props) => {
 
-    const [currentDateRange, setDateRange] = useState("Последняя неделя")
+    const [uploadedFile, setUploadedFile] = useState("");
+    const [uploadedFileSize, setUploadedFileSize] = useState(0);
 
+    const uploadFileHandler = (file) => {
+        setUploadedFileSize(Math.round(file.size / 1024));
+        setUploadedFile(file.name);
+    }
+    console.log(uploadedFile);
 
-    const changeRangeHandler = (event) => {
-        setDateRange(event.target.value);
+    const sendUploadedFile = () => {
+        console.log("send");
     }
 
     return <>
         <div className="importMainContent">
-            <div className="changeDateRangeContainer">
-                <select className="changeDataRange" value={currentDateRange} onChange={changeRangeHandler}>
-                    <option>Последняя неделя</option>
-                    <option>Последний месяц</option>
-                    <option>Последний год</option>
-                    <option>Выбранный промежуток</option>
-                </select>
-                {currentDateRange === "Выбранный промежуток" ?
-                    <div className="changeRange">
-                        <p className="textInput start">Начало:</p>
-                        <input type="date" className="dateInput from" />
-                        <p className="textInput end">Конец:</p>
-                        <input type="date" className="dateInput to" />
-                    </div> :
-                    <></>}
-            </div>
 
-            <button className="buttonGetTable">
-                Получить excel-файл
+            <DragAndDropInput uploadFile={uploadFileHandler} />
+            <ShowUploadedFile uploadedFile={uploadedFile} uploadedFileSize={uploadedFileSize} />
+            <ButtonAddToList sendFile={sendUploadedFile} />
+            <button className="buttonGetTable" onClick={() => { document.getElementById("inputFile").click() }}>
+                <input id="inputFile" type="file" accept=".xls,.xlsx,.csv" hidden />Загрузить excel-файл
             </button>
-
-
             <WarningContainer />
-
         </div>
     </>
 }

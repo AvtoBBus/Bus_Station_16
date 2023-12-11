@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 import useAuth from "../../../utils/hooks/useAuth"
 import hmacSHA384 from "crypto-js/hmac-sha384"
 import CryptoJS from "crypto-js"
+import axios from 'axios'
 
 
 const SignUp = (props) => {
@@ -20,100 +21,84 @@ const SignUp = (props) => {
         setUserName(event.target.value);
     }
 
+    const changePasswordHandler = (event) => {
+        setUserPass(event.target.value);
+    }
+
+    const checkInputName = (strToCheck) => {
+        const regex = new RegExp("(_{1,2})?[a-zA-Z0-9]{2,}(_{1,2})?")
+        if (strToCheck.match(regex) === null) {
+            return false
+        }
+        return true
+    }
+
+    const checkPass = (strToCheck) => {
+        const regexLittle = new RegExp("[a-z]{3,}");
+        const regexHigh = new RegExp("[A-Z]{1,}");
+        const regexNum = new RegExp("[0-9]{3,}")
+        if (strToCheck.match(regexLittle) === null || strToCheck.match(regexHigh) === null || strToCheck.match(regexNum) === null) {
+            return false;
+        }
+        return true;
+    }
+
 
     const requestDB = (event) => {
         event.preventDefault();
         console.log("signup");
-        if (userName.length) {
-            signIn({ userName: userName, auth: true }, () => navigate("/", { replace: true }));
-
-            const changePasswordHandler = (event) => {
-                setUserPass(event.target.value);
-            }
-
-
-            const checkInputName = (strToCheck) => {
-                const regex = new RegExp("(_{1,2})?[a-zA-Z0-9]{2,}(_{1,2})?")
-                if (strToCheck.match(regex) === null) {
-                    return false
-                }
-                return true
-            }
-
-            const checkPass = (strToCheck) => {
-                if (strToCheck.length < 8) {
-                    return false;
-                }
-                const regexLittle = new RegExp("[a-z]{1,}");
-                const regexHigh = new RegExp("[A-Z]{1,}");
-                const regexLLittle = new RegExp("[а-я]{1,}");
-                const regexLHigh = new RegExp("[А-Я]{1,}");
-                const regexNum = new RegExp("[0-9]{1,}");
-                const regexSimbol = new RegExp("[@#$_,.|]{1,}")
-                if (
-                    (strToCheck.match(regexLittle) !== null || strToCheck.match(regexLLittle) !== null) &&
-                    (strToCheck.match(regexHigh) !== null || strToCheck.match(regexLHigh) !== null) &&
-                    strToCheck.match(regexNum) !== null &&
-                    strToCheck.match(regexSimbol)
-                ) {
-                    return true;
-                }
-                return false;
-            }
-
-            const requestDB = (event) => {
-                event.preventDefault();
-                // console.log(JSON.stringify({ userName }));
-                if (checkInputName(userName)) {
-                    if (checkPass(userPass)) {
-                        fetch(`https://localhost:7215/registration/reg/init?login=${userName}`, {
-                            method: "POST"
-                        })
-                            .then(response => {
-                                if (response.ok) {
-
-                                    response.json().then((res) => {
-                                        fetch(`https://localhost:7215/registration/reg/confirm`, {
-                                            method: "POST",
-                                            headers: { "Content-Type": "application/json" },
-                                            body: JSON.stringify({
-                                                "login": userName,
-                                                "password": res.salt + hmacSHA384(userPass, CryptoJS.PBKDF2(userPass, res.salt))
-                                            })
-                                        })
-                                            .then(response => console.log(response))
-                                    });
-                                    signIn({ userName: userName, auth: true }, () => navigate("/", { replace: true }));
-                                }
+        if (checkInputName(userName)) {
+            if (checkPass(userPass)) {
+                // axios.interceptors.request.use(function (request) {
+                //     console.log(request)
+                //     return request;
+                // })
+                // axios.interceptors.response.use(function (response) {
+                //     console.log(response)
+                //     return response;
+                // })
+                axios(
+                    {
+                        method: 'post',
+                        url: `http://localhost:5290/reg/init?login=${userName}`,
+                        headers: { "Content-Type": "text/plain" },
+                        withCredentials: true,
+                    }
+                )
+                    .then(response => {
+                        if (response.status === 201) {
+                            axios({
+                                method: 'post',
+                                url: `http://localhost:5290/reg/confirm`,
+                                headers: { "Content-Type": "application/json" },
+                                withCredentials: true,
+                                data: JSON.stringify({
+                                    "login": userName,
+                                    "password": hmacSHA384(userPass, CryptoJS.SHA384(response.data)).toString()
+                                })
                             })
-                            .catch(error => {
-                                console.log(error.message);
-                            });
+                                .then(response => {
+                                    signIn({ userName: userName, auth: true }, () => navigate("/", { replace: true }));
+                                })
 
-                        // signIn({ userName: userName, auth: true }, () => navigate("/", { replace: true }));
+                        }
                     }
-                    else {
-                        alert(poorPass);
-                    }
-                }
-                else {
-                    alert("Недопустимое имя пользователя!\nПример имён: Name, _name_, __NAME__")
-                }
+                    )
             }
-
-            return <>
-                <div className="signUpContainer">
-                    <h1 className="containerName">ЗАРЕГИСТРИРУЙСЯ</h1>
-                    <label className="labelInput login">Логин:</label>
-                    <input className="loginInput user" type="text" value={userName} onChange={changeNameHandler}></input>
-                    <label className="labelInput password">Пароль:</label>
-                    <input className="loginInput pass" type="password" onChange={changePasswordHandler}></input>
-                    <Link to="/" >
-                        <button className="loginButton" onClick={requestDB}>Зарегистрироваться</button>
-                    </Link>
-                </div>
-            </>
         }
     }
+
+    return <>
+        <div className="signUpContainer">
+            <h1 className="containerName">ЗАРЕГИСТРИРУЙСЯ</h1>
+            <label className="labelInput login">Логин:</label>
+            <input className="loginInput user" type="text" value={userName} onChange={changeNameHandler}></input>
+            <label className="labelInput password">Пароль:</label>
+            <input className="loginInput pass" type="password" onChange={changePasswordHandler}></input>
+            <Link to="/" >
+                <button className="loginButton" onClick={requestDB}>Зарегистрироваться</button>
+            </Link>
+        </div>
+    </>
 }
 export default SignUp;

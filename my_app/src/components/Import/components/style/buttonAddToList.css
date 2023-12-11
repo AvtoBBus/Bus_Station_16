@@ -1,0 +1,30 @@
+.sendUploadedFile {
+    position: absolute;
+    top: 552px;
+    left: 735px;
+    width: 166px;
+    height: 135px;
+    background-color: #928DCC;
+    border: 0px;
+    border-radius: 30px;
+    font-size: 25px;
+    color: #d5d4e1;
+}
+
+
+.sendUploadedFile:hover {
+    transition-duration: 0.2s;
+    color: #a199ff;
+}
+
+
+@keyframes sendUploadedFile {
+    from {
+        color: #d5d4e1;
+    }
+
+    to {
+        color: #a199ff;
+    }
+
+}

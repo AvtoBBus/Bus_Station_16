@@ -55,11 +55,11 @@ const ExpensesListTransaction = (props) => {
     }
 
     return <>
-        <div className="expensesList" style={{ ...props.style, width: 1435 }}>
+        <div className="expensesList" style={{ ...props.style, width: 1415 }}>
             <FixedSizeList
                 className="fixedExpensesList"
                 height={572}
-                width={1435}
+                width={1415}
                 itemCount={filteredList.length}
                 itemSize={230}
                 style={{

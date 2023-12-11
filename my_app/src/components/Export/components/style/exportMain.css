@@ -1,4 +1,4 @@
-.importMainContent {
+.exportMainContent {
     height: 843px;
     background-color: rgb(235, 233, 255);
 }
@@ -83,8 +83,4 @@
 .end {
     top: 398px;
     left: 120px;
-}
-
-input::file-selector-button {
-    display: none;
 }
