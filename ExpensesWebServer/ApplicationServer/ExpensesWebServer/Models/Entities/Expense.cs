@@ -23,7 +23,7 @@ namespace ExpensesWebServer.Models.Entities
         [Column(TypeName = "decimal(18,4)")]
         public decimal Amount { get; set; }
         // CreationDate - дата, когда трата имела место быть
-        public DateTime CreationDate { get; set; }
+        public DateOnly CreationDate { get; set; }
         // Category - тип траты
         [Required]
         public int Category { get; set; }

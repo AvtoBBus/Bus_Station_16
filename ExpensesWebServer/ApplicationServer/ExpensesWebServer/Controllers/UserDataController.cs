@@ -51,9 +51,10 @@ namespace ExpensesWebServer.Controllers
                 _logger.LogError($"Error parsing issuer\nMessage:{ex.Message}\n");
                 throw;
             }
-            return Ok(await _expenseReposirity.GetRangeByDates(
-                                DateTime.Parse(dto.StartDate), 
-                                DateTime.Parse(dto.StopDate)));
+            return Ok(await _expenseReposirity.GerRangeBetweenDatesById(
+                                userId,
+                                DateOnly.Parse(dto.StartDate),
+                                DateOnly.Parse(dto.StopDate)));
         }
         [HttpGet]
         [Route("getAll")]

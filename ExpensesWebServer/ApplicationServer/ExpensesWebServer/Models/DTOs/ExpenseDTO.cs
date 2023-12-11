@@ -9,7 +9,7 @@ namespace ExpensesWebServer.Models.DTOs
         // Amount - величина траты в рублях
         public decimal Amount { get; set; }
         // CreationDate - дата, когда трата имела место быть
-        public DateTime CreationDate { get; set; }
+        public DateOnly CreationDate { get; set; }
         // Category - тип траты
         public int Category { get; set; }
     }

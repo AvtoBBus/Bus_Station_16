@@ -44,12 +44,23 @@ namespace ExpensesWebServer.Data
 
         public Task<List<Expense>> GetListOfObjects() => _context.Expenses.ToListAsync();
 
-        public Task<List<Expense>> GetRangeByDates(DateTime start, DateTime stop)
+        public async Task<List<Expense>> GerRangeBetweenDatesById(int id, DateOnly start, DateOnly stop)
         {
-            var expenses = from expense in _context.Expenses where
-                           expense.CreationDate > start && expense.CreationDate < stop
-                           select expense;
-            return expenses.ToListAsync();
+            List<Expense> expenses;
+            var test = _context.Expenses.First().CreationDate;
+            if (start.ToShortDateString() == stop.ToShortDateString())
+            {
+                  expenses = await _context.Expenses.Where(expense => expense.CreationDate == start && expense.UserId == id).ToListAsync();
+            }
+            else
+            {
+                  expenses = await _context.Expenses.Where(
+                    expense =>
+                    expense.CreationDate >= start
+                    && expense.CreationDate <= stop
+                    && expense.UserId == id).ToListAsync();
+            }
+            return expenses;
         }
 
         public Expense Update(Expense entity)
