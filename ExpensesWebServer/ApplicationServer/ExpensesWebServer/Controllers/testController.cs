@@ -1,14 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace ExpensesWebServer.Controllers
 {
     [ApiController]
-    [Route("testController")]
+    [Microsoft.AspNetCore.Mvc.Route("testController")]
     public class testController : Controller
     {
 
-        [HttpGet]
-        [Route("testEndpoint")]
-        public IActionResult testEndpoint() => Ok("Тут какой-то текст, можешь попробовать его вытащить");
+        [HttpPost("UploadFile")]
+        public IActionResult UploadFile(IFormFile formFile)
+        {
+            Console.WriteLine("UploadFile" + formFile.FileName);
+            return Ok(formFile.FileName);
+        }
     }
 }

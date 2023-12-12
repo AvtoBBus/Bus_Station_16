@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./style/dragAndDropInput.css"
-
+import axios from "axios";
 
 const DragAndDropInput = (props) => {
 
@@ -19,6 +19,14 @@ const DragAndDropInput = (props) => {
 
     const onDropHandler = (event) => {
         event.preventDefault();
+        console.log(event.dataTransfer.files[0])
+        const reqData = new FormData(event.dataTransfer.files);
+        axios({
+            method: "POST",
+            url: `http://localhost:5290//testCnotroller/UploadFile`,
+            withCredentials: true,
+            data: reqData,
+        })
         props.uploadFile(event.dataTransfer.files[0])
         setOnDrag(false);
     }

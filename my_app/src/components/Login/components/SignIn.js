@@ -62,7 +62,7 @@ const SignIn = (props) => {
                             })
                                 .then(function (response) {
                                     if (response.status === 200) {
-                                        axios.get(`http://localhost:5290/userData/UserData/getAll`, { withCredentials: true })
+                                        axios.get(`http://localhost:5290/userData/getAll`, { withCredentials: true })
                                             .then(response => {
                                                 if (response.status === 200) {
                                                     console.log(response.data);

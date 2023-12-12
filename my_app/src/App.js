@@ -80,7 +80,7 @@ function App() {
     console.log(vedro);
     axios({
       method: 'post',
-      url: `http://localhost:5290/userData/UserData/delete/${elemIndex}`,
+      url: `http://localhost:5290/userData/delete/${elemIndex}`,
       withCredentials: true,
     })
       .then(response => {
@@ -99,13 +99,13 @@ function App() {
 
     axios({
       method: 'post',
-      url: `http://localhost:5290/userData/UserData/add`,
-      headers: { "Content-Type": "application/json" },
+      url: `http://localhost:5290/userData/add`,
       withCredentials: true,
+      headers: { "Content-Type": "application/json" },
       data: JSON.stringify({
         "expenseDescription": newElem.description,
         "amount": newElem.price,
-        "creationDate": `${newElem.date.year}-${Number(newElem.date.month)}-${newElem.date.day}T00:00:00.000Z`,
+        "creationDate": `${newElem.date.year}-${Number(newElem.date.month)}-${newElem.date.day}`,
         "category": Object.values(filterConverter).indexOf(newElem.category) - 1
       })
     })

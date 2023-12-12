@@ -100,7 +100,7 @@ namespace ExpensesWebServer.Controllers
                 return BadRequest("Ошибка создания  записи траты");
             }
             return Ok(expense);
-        }
+            }
         [HttpPost]
         [Route("delete/{id}")]
         public IActionResult Delete(int id)

@@ -78,7 +78,7 @@ const SignUp = (props) => {
                                 })
                             })
                                 .then(response => {
-                                    signIn({ userName: userName, auth: true }, () => navigate("/", { replace: true }));
+                                    alert("Вы зарегались, теперь вы раб системы")
                                 })
 
                         }
