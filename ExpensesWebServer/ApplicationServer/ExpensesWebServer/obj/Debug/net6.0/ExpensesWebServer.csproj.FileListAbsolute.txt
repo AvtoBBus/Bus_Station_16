@@ -174,3 +174,4 @@ C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\
 C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.pdb
 C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.genruntimeconfig.cache
 C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ref\ExpensesWebServer.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.sourcelink.json

@@ -1,9 +1,7 @@
 ﻿using ExpensesWebServer.Data;
-using ExpensesWebServer.Models.DTOs;
 using ExpensesWebServer.Models.Entities;
 using ExpensesWebServer.Services;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.IdentityModel.Tokens.Jwt;
 
 namespace ExpensesWebServer.Controllers
@@ -25,12 +23,13 @@ namespace ExpensesWebServer.Controllers
             _jwtService = jwtService;
         }
         private string formatDate(DateTime date) => date.ToString("yyyy-MM-dd HH:mm");
-        private JwtSecurityToken JwtSecurityToken()
+        private JwtSecurityToken? JwtSecurityToken()
         {
             JwtSecurityToken verifiedJWT;
             try
             {
                 var jwt = Request.Cookies["jwt"];
+                if (jwt is null) throw new NullReferenceException("JWT was null");
                 verifiedJWT = _jwtService.verify(jwt);
             }
             catch (Exception ex)
@@ -61,56 +60,38 @@ namespace ExpensesWebServer.Controllers
         }
         [HttpPost]
         [Route("[controller]/update/{id}")]
-        public IActionResult Update(int id, ExpenseDTO dto)
+        public IActionResult Update(Expense obj)
         {
             var verifiedJWT = JwtSecurityToken();
             if (verifiedJWT == null) return Unauthorized();
-
-            var expense = new Expense
-            {
-                Id = id,
-                UserId = int.Parse(verifiedJWT.Issuer),
-                ExpenseDescription = dto.ExpenseDescription,
-                Amount = dto.Amount,
-                CreationDate = dto.CreationDate,
-                Category = dto.Category
-            };
             try 
             {
-                _expenseReposirity.Update(expense);
+                _expenseReposirity.Update(obj);
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Ошибка обновления записи траты\nСообщение:{ex.Message}");
                 return BadRequest("Ошибка обновления  записи траты");
             }
-            return Ok(dto);
+            return Ok(obj);
         }
         [HttpPost]
         [Route("[controller]/add")]
-        public async Task<IActionResult> Add(ExpenseDTO dto)
+        public async Task<IActionResult> Add(Expense obj)
         {
             var verifiedJWT = JwtSecurityToken();
             if (verifiedJWT == null) return Unauthorized();
-
-            var expense = new Expense
-            {
-                UserId = int.Parse(verifiedJWT.Issuer),
-                ExpenseDescription = dto.ExpenseDescription,
-                Amount = dto.Amount,
-                CreationDate = dto.CreationDate,
-                Category = dto.Category
-            };
             try
             {
-                await _expenseReposirity.CreateAsync(expense);
+                obj.UserId = int.Parse(verifiedJWT.Issuer);
+                await _expenseReposirity.CreateAsync(obj);
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Ошибка создания  записи траты\nСообщение:{ex.Message}");
                 return BadRequest("Ошибка создания  записи траты");
             }
-            return Ok(dto);
+            return Ok(obj);
         }
         [HttpPost]
         [Route("[controller]/delete/{id}")]

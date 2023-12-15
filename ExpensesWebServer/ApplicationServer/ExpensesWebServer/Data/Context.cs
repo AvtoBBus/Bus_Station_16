@@ -21,14 +21,6 @@ namespace ExpensesWebServer.Data
             modelBuilder.Entity<User>().HasAlternateKey(u => u.UserLogin);
 
             modelBuilder.Entity<Expense>().HasIndex(u => u.Category);
-
-            modelBuilder.Entity<User>().HasData(new User
-            {
-                Id = 1,
-                UserLogin = "Tom",
-                UserPassword = "test",
-                Salt = string.Empty
-            });
         }
     }
 
