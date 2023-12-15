@@ -1,6 +1,7 @@
 ﻿using ExpensesWebServer.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
+using System.Linq;
 
 namespace ExpensesWebServer.Data
 {
@@ -42,6 +43,25 @@ namespace ExpensesWebServer.Data
         }
 
         public Task<List<Expense>> GetListOfObjects() => _context.Expenses.ToListAsync();
+
+        public async Task<List<Expense>> GerRangeBetweenDatesById(int id, DateOnly start, DateOnly stop)
+        {
+            List<Expense> expenses;
+            var test = _context.Expenses.First().CreationDate;
+            if (start.ToShortDateString() == stop.ToShortDateString())
+            {
+                  expenses = await _context.Expenses.Where(expense => expense.CreationDate == start && expense.UserId == id).ToListAsync();
+            }
+            else
+            {
+                  expenses = await _context.Expenses.Where(
+                    expense =>
+                    expense.CreationDate >= start
+                    && expense.CreationDate <= stop
+                    && expense.UserId == id).ToListAsync();
+            }
+            return expenses;
+        }
 
         public Expense Update(Expense entity)
         {

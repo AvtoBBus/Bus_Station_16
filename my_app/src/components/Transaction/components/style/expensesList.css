@@ -1,0 +1,17 @@
+.expensesList {
+    position: relative;
+    left: 190px;
+    top: 140px;
+    width: 610px;
+    height: 582px;
+    padding: 10px;
+    background-color: #928DCC;
+    border-radius: 30px;
+}
+
+
+.variableExpensesList {
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+}

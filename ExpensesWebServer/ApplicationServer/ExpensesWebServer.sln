@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpensesWebServer", "Expens
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsvImportProcessorsLibrary", "CsvImportProcessorsLibrary\CsvImportProcessorsLibrary.csproj", "{C34536CA-9244-4B85-993F-07FD55FB4F9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{CB0018A9-7FC7-4C59-BEB2-CD0057145542}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tester", "Tester\Tester.csproj", "{CB0018A9-7FC7-4C59-BEB2-CD0057145542}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

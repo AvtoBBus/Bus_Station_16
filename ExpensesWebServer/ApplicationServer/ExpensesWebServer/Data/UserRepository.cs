@@ -20,7 +20,7 @@ namespace ExpensesWebServer.Data
 
         public User Update(User entity)
         {
-            var dbEntity = _context.Expenses.FirstOrDefault(ex => ex.Id == entity.Id);
+            var dbEntity = _context.Users.FirstOrDefault(ex => ex.Id == entity.Id);
             if (dbEntity == null) throw new ArgumentException($"User with id =={entity.Id} not found");
             _context.Users.Update(entity);
             _context.SaveChanges();

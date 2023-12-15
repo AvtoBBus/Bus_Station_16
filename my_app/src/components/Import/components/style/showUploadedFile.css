@@ -1,0 +1,25 @@
+.showUploadedFileBlock {
+    position: absolute;
+    top: 552px;
+    left: 159px;
+    background-color: #928DCC;
+    width: 560px;
+    /*width: 741px; */
+    height: 135px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(56, 56, 56);
+    font-size: 27px;
+}
+
+.fileName {
+    position: relative;
+    left: -70px;
+}
+
+.fileSize {
+    position: relative;
+    left: 100px;
+}
