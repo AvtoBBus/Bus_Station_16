@@ -1,4 +1,5 @@
-.\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin
-.\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj
-.\ExpensesWebServer\ApplicationServer\CsvImportProcessorsLibrary\bin
-.\ExpensesWebServer\ApplicationServer\CsvImportProcessorsLibrary\obj
+./ExpensesWebServer/ApplicationServer/ExpensesWebServer/bin
+./ExpensesWebServer/ApplicationServer/ExpensesWebServer/obj
+./ExpensesWebServer/ApplicationServer/CsvImportProcessorsLibrary/bin
+./ExpensesWebServer/ApplicationServer/CsvImportProcessorsLibrary/obj
+./ExpensesWebServer/ApplicationServer/.vs
