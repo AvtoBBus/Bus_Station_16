@@ -7,7 +7,7 @@ const Transaction = (props) => {
         return <>
                 <Header />
                 <SignOut />
-                <TransactionMainContent expList={props.expList} filterConverter={props.filterConverter} addItem={props.addElemInList} />
+                <TransactionMainContent expList={props.expList} filterConverter={props.filterConverter} addItem={props.addElemInList} delItem={props.deleteElemByIndex} editElem={props.editElem} />
                 <Footer />
         </>
 }

@@ -77,29 +77,22 @@ namespace ExpensesWebServer.Controllers
         }
         [HttpPost]
         [Route("add")]
-        public async Task<IActionResult> Add(ExpenseDTO dto)
+        public async Task<IActionResult> Add(Expense obj)
         {
             var verifiedJWT = JwtSecurityToken();
             if (verifiedJWT == null) return Unauthorized();
 
-            var expense = new Expense
-            {
-                UserId = int.Parse(verifiedJWT.Issuer),
-                ExpenseDescription = dto.ExpenseDescription,
-                Amount = dto.Amount,
-                CreationDate = dto.CreationDate,
-                Category = dto.Category
-            };
+            obj.UserId = int.Parse(verifiedJWT.Issuer);
             try
             {
-                await _expenseReposirity.CreateAsync(expense);
+                await _expenseReposirity.CreateAsync(obj);
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Ошибка создания  записи траты\nСообщение:{ex.Message}");
                 return BadRequest("Ошибка создания  записи траты");
             }
-            return Ok(expense);
+            return Ok(obj);
             }
         [HttpPost]
         [Route("delete/{id}")]
@@ -120,31 +113,23 @@ namespace ExpensesWebServer.Controllers
             return NoContent();
         }
         [HttpPost]
-        [Route("update/{id}")]
-        public IActionResult Update(int id, ExpenseDTO dto)
+        [Route("update")]
+        public IActionResult Update(Expense obj)
         {
             var verifiedJWT = JwtSecurityToken();
             if (verifiedJWT == null) return Unauthorized();
 
-            var expense = new Expense
-            {
-                Id = id,
-                UserId = int.Parse(verifiedJWT.Issuer),
-                ExpenseDescription = dto.ExpenseDescription,
-                Amount = dto.Amount,
-                CreationDate = dto.CreationDate,
-                Category = dto.Category
-            };
+            //obj.UserId = int.Parse(verifiedJWT.Issuer);
             try
             {
-                _expenseReposirity.Update(expense);
+                _expenseReposirity.Update(obj);
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Ошибка обновления записи траты\nСообщение:{ex.Message}");
                 return BadRequest("Ошибка обновления  записи траты");
             }
-            return Ok(dto);
+            return Ok(obj);
         }
     }
 

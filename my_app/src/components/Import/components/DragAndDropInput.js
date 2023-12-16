@@ -19,12 +19,12 @@ const DragAndDropInput = (props) => {
 
     const onDropHandler = (event) => {
         event.preventDefault();
-        console.log(event.dataTransfer.files[0])
-        const reqData = new FormData(event.dataTransfer.files);
+        let reqData = new FormData();
         axios({
             method: "POST",
-            url: `http://localhost:5290//testCnotroller/UploadFile`,
+            url: `http://localhost:5290/testController/UploadFile`,
             withCredentials: true,
+            headers: { "Content-Type": "multipart/form-data" },
             data: reqData,
         })
         props.uploadFile(event.dataTransfer.files[0])

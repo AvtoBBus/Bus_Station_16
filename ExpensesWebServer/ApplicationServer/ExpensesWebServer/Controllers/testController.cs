@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Net;
+using System.Text;
+using System.Text.Json.Serialization;
 
 namespace ExpensesWebServer.Controllers
 {
@@ -9,10 +13,13 @@ namespace ExpensesWebServer.Controllers
     {
 
         [HttpPost("UploadFile")]
-        public IActionResult UploadFile(IFormFile formFile)
+        public IActionResult UploadFile(IFormFile fileData)
         {
-            Console.WriteLine("UploadFile" + formFile.FileName);
-            return Ok(formFile.FileName);
+            //var parsed = JsonConvert.SerializeObject(fileData);
+            //var data = System.Convert.FromBase64String(parsed);
+            //Console.WriteLine(data);
+
+            return Ok();
         }
     }
 }

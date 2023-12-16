@@ -65,8 +65,8 @@ namespace ExpensesWebServer.Data
 
         public Expense Update(Expense entity)
         {
-            var dbEntity = _context.Expenses.FirstOrDefault(ex => ex.Id == entity.Id);
-            if (dbEntity == null) throw new ArgumentException($"Expense with id =={entity.Id} not found");
+            //var dbEntity = _context.Expenses.FirstOrDefault(ex => ex.Id == entity.Id);
+            //if (dbEntity == null) throw new ArgumentException($"Expense with id =={entity.Id} not found");
             _context.Expenses.Update(entity);
             _context.SaveChanges();
             return entity;

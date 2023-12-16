@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom"
 import "./style/expensesList.css"
 import deleteImgPath from "./style/data/img/deleteImg.png"
+import editImgPath from "./style/data/img/editImg.png"
 
 const ExpensesListTransaction = (props) => {
 
@@ -29,6 +30,12 @@ const ExpensesListTransaction = (props) => {
     }
 
 
+    const editItemHandler = (event) => {
+        const itemIndex = event.target.className.split(" ")[1];
+        const item = filteredList[itemIndex];
+        props.editItem(item);
+    }
+
 
     const renderRow = ({ index, style }) => {
         const item = filteredList[index];
@@ -46,7 +53,10 @@ const ExpensesListTransaction = (props) => {
                     <p className="itemDay">{item.date.day}</p>
                 </div>
                 {props.editFlag ?
-                    <img className={'deleteElement ' + index} onClick={delItemHandler} src={deleteImgPath} style={{ position: "relative", left: 1200, top: -180, width: 100, height: 100 }} />
+                    <>
+                        <img className={'editElement ' + index} onClick={editItemHandler} src={editImgPath} style={{ position: "relative", left: 1000, top: -185, width: 90, height: 90 }} />
+                        <img className={'deleteElement ' + index} onClick={delItemHandler} src={deleteImgPath} style={{ position: "relative", left: 1100, top: -180, width: 100, height: 100 }} />
+                    </>
                     :
                     <></>
                 }

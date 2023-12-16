@@ -48,6 +48,7 @@ function App() {
   const [expensesList, setExpensesList] = useState([])
 
   // axios.interceptors.response.use(function (response) {
+  //   console.log(response);
   //   return response;
   // })
   // axios.interceptors.request.use(function (request) {
@@ -73,18 +74,21 @@ function App() {
     setExpensesList(vedro);
   }
 
+  const editElem = (elem) => {
+    console.log(elem);
+  }
+
 
   const deleteElem = (elemIndex) => {
     let vedro = [...expensesList];
-    vedro.filter(item => item.expensesID !== elemIndex);
-    console.log(vedro);
+    vedro = vedro.filter(item => item.expensesID !== elemIndex);
     axios({
       method: 'post',
       url: `http://localhost:5290/userData/delete/${elemIndex}`,
       withCredentials: true,
     })
       .then(response => {
-        if (response.status === 200) {
+        if (response.status === 204) {
           setExpensesList(vedro);
         }
         else {
@@ -110,6 +114,7 @@ function App() {
       })
     })
       .then(response => {
+        console.log(response.data)
         if (response.status === 200) {
           vedro.push({
             expensesID: response.data.id,
@@ -144,7 +149,7 @@ function App() {
 
           <Route path="/transaction" element={
             <PrivateRoute>
-              <Transaction expList={expensesList} deleteElemByIndex={deleteElem} addElemInList={addElem} filterConverter={filterConverter} />
+              <Transaction expList={expensesList} editElem={editElem} deleteElemByIndex={deleteElem} addElemInList={addElem} filterConverter={filterConverter} />
             </PrivateRoute>
           }></Route>
 
