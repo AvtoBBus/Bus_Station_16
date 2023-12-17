@@ -54,13 +54,13 @@ const TransactionMainContent = (props) => {
 
 
             {
-                flagAddItem ?
+                flagAddItem && !flagEditItem ?
                     <div>
                         <AddItem filterConverter={props.filterConverter} addElemInList={props.addItem} closeAddMenu={closeMenuHandler} />
                     </div> :
                     flagEditItem ?
                         <div>
-                            <EditItem filterConverter={props.filterConverter} itemToEdit={itemToEdit} editElemInList={props.editElem} closeAddMenu={closeMenuHandler} />
+                            <EditItem filterConverter={props.filterConverter} itemToEdit={itemToEdit} editElemInList={props.editElem} closeAddMenu={closeMenuHandler} months={props.months} />
                         </div> :
                         <ExpensesListTransaction expList={props.expList} filterValue={props.filterConverter[filterValue]} filterConverter={props.filterConverter} editFlag={flagItemOnWork} editItem={editItemHandler} deleteElemByIndex={props.delItem} />
             }

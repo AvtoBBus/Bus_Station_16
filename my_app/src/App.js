@@ -62,11 +62,11 @@ function App() {
       vedro.push({
         expensesID: elem.id,
         description: elem.expenseDescription,
-        price: elem.amount,
+        amount: elem.amount,
         category: Object.values(filterConverter)[elem.category + 1],
         date: {
           year: elem.creationDate.split("T")[0].split("-")[0],
-          month: elem.creationDate.split("T")[0].split("-")[1],
+          month: months[elem.creationDate.split("T")[0].split("-")[1] - 1],
           day: elem.creationDate.split("T")[0].split("-")[2],
         }
       })
@@ -75,7 +75,24 @@ function App() {
   }
 
   const editElem = (elem) => {
-    console.log(elem);
+    axios({
+      method: 'post',
+      url: `http://localhost:5290/userData/update`,
+      withCredentials: true,
+      headers: { "Content-Type": "application/json" },
+      data: JSON.stringify({
+        "id": elem.expensesID,
+        "userId": 0,
+        "expenseDescription": elem.expensesDescription,
+        "amount": elem.amount,
+        "creationDate": {
+          year: elem.creationDate.split("T")[0].split("-")[0],
+          month: months[elem.creationDate.split("T")[0].split("-")[1] - 1],
+          day: elem.creationDate.split("T")[0].split("-")[2],
+        },
+        "category": Object.values(filterConverter)[elem.category + 1],
+      })
+    })
   }
 
 
@@ -108,7 +125,7 @@ function App() {
       headers: { "Content-Type": "application/json" },
       data: JSON.stringify({
         "expenseDescription": newElem.description,
-        "amount": newElem.price,
+        "amount": newElem.amount,
         "creationDate": `${newElem.date.year}-${Number(newElem.date.month)}-${newElem.date.day}`,
         "category": Object.values(filterConverter).indexOf(newElem.category) - 1
       })
@@ -119,7 +136,7 @@ function App() {
           vedro.push({
             expensesID: response.data.id,
             description: newElem.description,
-            price: newElem.price,
+            amount: newElem.amount,
             category: newElem.category,
             date: {
               year: newElem.date.year,
@@ -137,19 +154,23 @@ function App() {
 
   }
 
+  const clearList = () => {
+    setExpensesList([]);
+  }
+
   return <>
     <AuthProvider>
       <div className="app">
         <Routes>
           <Route path="/" element={
             <PrivateRoute>
-              <Home expList={expensesList} filterConverter={filterConverter} />
+              <Home clearList={clearList} expList={expensesList} filterConverter={filterConverter} />
             </PrivateRoute>
           }></Route>
 
           <Route path="/transaction" element={
             <PrivateRoute>
-              <Transaction expList={expensesList} editElem={editElem} deleteElemByIndex={deleteElem} addElemInList={addElem} filterConverter={filterConverter} />
+              <Transaction expList={expensesList} editElem={editElem} deleteElemByIndex={deleteElem} addElemInList={addElem} filterConverter={filterConverter} months={months} />
             </PrivateRoute>
           }></Route>
 

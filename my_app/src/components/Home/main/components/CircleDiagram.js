@@ -23,7 +23,7 @@ const CircleDiagram = (props) => {
 
     for (let e of props.dataToFill) {
         const key = Object.keys(props.filterConverter)[Object.values(props.filterConverter).indexOf(e.category)];
-        drawingData[key] += e.price;
+        drawingData[key] += e.amount;
     }
 
     let flag = false;

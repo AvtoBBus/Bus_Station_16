@@ -16,7 +16,7 @@ const EditItem = (props) => {
     const checkInput = (newExpenses) => {
         if (newExpenses.description.length === 0)
             throw "Заполните поле Название!";
-        if (newExpenses.price === 0)
+        if (newExpenses.amount === 0)
             throw "Заполните поле Деньги!";
         if (newExpenses.category === "nothing")
             throw "Выберете категорию!";
@@ -25,7 +25,7 @@ const EditItem = (props) => {
     const editItemHandler = () => {
         const newExpenses = {
             description: descValue,
-            price: Number(moneyValue),
+            amount: Number(moneyValue),
             category: Object.values(props.filterConverter)[Object.keys(props.filterConverter).indexOf(currentCategory)],
             date: {
                 year: dateValue.split("-")[0],
@@ -52,7 +52,7 @@ const EditItem = (props) => {
             </div>
             <div className="inputBlock moneyBlock">
                 <p className="moneyP">Деньги(₽):</p>
-                <input className="inputValue moneyValue" type="number" value={props.itemToEdit.price} onChange={(event) => setMoneyValue(event.target.value)} />
+                <input className="inputValue moneyValue" type="number" value={props.itemToEdit.amount} onChange={(event) => setMoneyValue(event.target.value)} />
             </div>
             <div className="inputBlock categoryBlock">
                 <p className="categoryP">Категория:</p>
@@ -60,7 +60,7 @@ const EditItem = (props) => {
             </div>
             <div className="inputBlock dateBlock">
                 <p className="dateP">Дата траты:</p>
-                <input className="inputValue dateValue" type="date" value={props.itemToEdit.date.year + "-" + props.itemToEdit.date.month + "-" + props.itemToEdit.date.day} onChange={(event) => setDateValue(event.target.value)} />
+                <input className="inputValue dateValue" type="date" value={props.itemToEdit.date.year + "-" + `${props.months.indexOf(props.itemToEdit.date.month) + 1}` + "-" + props.itemToEdit.date.day} onChange={(event) => setDateValue(event.target.value)} />
             </div>
             <button className="addButton" type="button" onClick={editItemHandler}>
                 Изменить

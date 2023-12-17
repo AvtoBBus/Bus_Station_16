@@ -1,9 +1,10 @@
 import { Link, Navigate, useNavigate } from "react-router-dom"
 import useAuth from "../../../../utils/hooks/useAuth";
+import axios from "axios";
 import "./style/signOut.css"
 
 
-const SignOut = () => {
+const SignOut = (props) => {
 
     const { signOut } = useAuth();
     const navigate = useNavigate();
@@ -11,11 +12,21 @@ const SignOut = () => {
     const signOutHandler = (event) => {
         event.preventDefault();
         console.log("signout");
-        fetch(`https://localhost:7215/authentication/logout`, {
+        axios(`http://localhost:5290/auth/logout`, {
             method: "POST",
         })
-            .then(response => console.log(response))
-        signOut(() => navigate("/login", { replace: true }));
+            .then(response => {
+                if (response.status === 200) {
+                    console.log(response);
+                    signOut(() => {
+                        props.clearList();
+                        navigate("/login", { replace: true });
+                    });
+                }
+            })
+            .catch(er => {
+                alert(`Ошибка!\n${er}`)
+            })
     }
 
     const user = useAuth().user;

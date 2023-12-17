@@ -33,7 +33,7 @@ const ExpensesList = (props) => {
                 <div className='itemRightContent'>
                     <p className="itemDescription">{convertStr(item.description)}</p>
                     <p className="itemMoneyText">Money:</p>
-                    <p className="itemMoney">{convertStr(String(item.price))}</p>
+                    <p className="itemMoney">{convertStr(String(item.amount))}</p>
                 </div>
                 <p className="itemCategory">Category:<br /><b>{convertStr(Object.keys(props.filterConverter)[Object.values(props.filterConverter).indexOf(item.category)])}</b></p>
                 <div className='itemDateContainer'>

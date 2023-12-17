@@ -20,7 +20,7 @@ const MainContent = (props) => {
             <Link to="/transaction">
                 <ButtonAddExpenses />
             </Link>
-            <SignOut />
+            <SignOut clearList={props.clearList} />
             <ExpensesFilter filterConverter={props.filterConverter} onChangeCurrentFilter={currentFilterChanged} />
             <ExpensesList expList={props.expList} filterConverter={props.filterConverter} filterValue={props.filterConverter[filterValue]} />
         </div>
