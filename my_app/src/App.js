@@ -83,16 +83,21 @@ function App() {
       data: JSON.stringify({
         "id": elem.expensesID,
         "userId": 0,
-        "expenseDescription": elem.expensesDescription,
+        "expenseDescription": elem.description,
         "amount": elem.amount,
-        "creationDate": {
-          year: elem.creationDate.split("T")[0].split("-")[0],
-          month: months[elem.creationDate.split("T")[0].split("-")[1] - 1],
-          day: elem.creationDate.split("T")[0].split("-")[2],
-        },
-        "category": Object.values(filterConverter)[elem.category + 1],
+        "creationDate": `${elem.date.year}-${elem.date.month}-${elem.date.day}`,
+        "category": Object.values(filterConverter).indexOf(elem.category) - 1,
       })
     })
+      .then(response => {
+        if (response.status === 200) {
+          clearList();
+          axios.get(`http://localhost:5290/userData/getAll`, { withCredentials: true })
+            .then(response => {
+              setExpensesList(response.data);
+            })
+        }
+      })
   }
 
 

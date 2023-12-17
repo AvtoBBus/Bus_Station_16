@@ -39,7 +39,6 @@ const TransactionMainContent = (props) => {
         setFlagEditItem(!flagEditItem);
         if (!flagEditItem) {
             setItemtoEdit(item);
-            props.editElem(item);
         }
         else {
             setItemtoEdit(null);

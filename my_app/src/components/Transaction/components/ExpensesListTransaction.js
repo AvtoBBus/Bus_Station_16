@@ -44,7 +44,7 @@ const ExpensesListTransaction = (props) => {
             <div className="expensesListItem" style={style}>
                 <div className='itemRightContent' style={{ left: 360, width: "max-content" }}>
                     <p className="itemDescription">{convertStr(item.description)}</p>
-                    <p className="itemMoney">Money: {convertStr(String(item.price))}</p>
+                    <p className="itemMoney">Money: {convertStr(String(item.amount))}</p>
                 </div>
                 <p className="itemCategory" style={{ left: 730 }}>Category:<br /><b>{Object.keys(props.filterConverter)[Object.values(props.filterConverter).indexOf(item.category)]}</b></p>
                 <div className='itemDateContainer'>
