@@ -23,8 +23,10 @@ const AddItem = (props) => {
 
     const addItemHandler = () => {
         const newExpenses = {
+            id: 0,
+            userId: 0,
             description: descValue,
-            price: Number(moneyValue),
+            amount: Number(moneyValue),
             category: Object.values(props.filterConverter)[Object.keys(props.filterConverter).indexOf(currentCategory)],
             date: {
                 year: dateValue.split("-")[0],

@@ -26,7 +26,7 @@ const ExpensesListTransaction = (props) => {
     const delItemHandler = (event) => {
         const itemIndex = event.target.className.split(" ")[1];
         const item = filteredList[itemIndex];
-        props.deleteElemByIndex(item.expensesID);
+        props.deleteElemByIndex(item.id);
     }
 
 

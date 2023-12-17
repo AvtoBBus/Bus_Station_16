@@ -50,8 +50,6 @@ const TransactionMainContent = (props) => {
             <div style={{ position: "absolute", top: -18 }}>
                 <ButtonAddExpenses style={{ width: 360, height: 60, fontSize: 30 }} addItem={addItemHanler} />
             </div>
-
-
             {
                 flagAddItem && !flagEditItem ?
                     <div>

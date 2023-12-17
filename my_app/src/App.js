@@ -46,7 +46,7 @@ function App() {
   }
 
   const [expensesList, setExpensesList] = useState([])
-
+  console.log(expensesList);
   // axios.interceptors.response.use(function (response) {
   //   console.log(response);
   //   return response;
@@ -57,10 +57,12 @@ function App() {
   // })
 
   const startGetListHandler = (userList) => {
+    console.log(userList);
     let vedro = [...expensesList]
     for (let elem of userList) {
       vedro.push({
-        expensesID: elem.id,
+        id: elem.id,
+        userId: elem.userId,
         description: elem.expenseDescription,
         amount: elem.amount,
         category: Object.values(filterConverter)[elem.category + 1],
@@ -81,8 +83,8 @@ function App() {
       withCredentials: true,
       headers: { "Content-Type": "application/json" },
       data: JSON.stringify({
-        "id": elem.expensesID,
-        "userId": 0,
+        "id": elem.id,
+        "userId": elem.userId,
         "expenseDescription": elem.description,
         "amount": elem.amount,
         "creationDate": `${elem.date.year}-${elem.date.month}-${elem.date.day}`,
@@ -94,7 +96,22 @@ function App() {
           clearList();
           axios.get(`http://localhost:5290/userData/getAll`, { withCredentials: true })
             .then(response => {
-              setExpensesList(response.data);
+              let vedro = [];
+              for (let elem of response.data) {
+                vedro.push({
+                  id: elem.id,
+                  userId: elem.userId,
+                  description: elem.expenseDescription,
+                  amount: elem.amount,
+                  category: Object.values(filterConverter)[elem.category + 1],
+                  date: {
+                    year: elem.creationDate.split("T")[0].split("-")[0],
+                    month: months[elem.creationDate.split("T")[0].split("-")[1] - 1],
+                    day: elem.creationDate.split("T")[0].split("-")[2],
+                  }
+                })
+              }
+              setExpensesList(vedro);
             })
         }
       })
@@ -103,7 +120,7 @@ function App() {
 
   const deleteElem = (elemIndex) => {
     let vedro = [...expensesList];
-    vedro = vedro.filter(item => item.expensesID !== elemIndex);
+    vedro = vedro.filter(item => item.id !== elemIndex);
     axios({
       method: 'post',
       url: `http://localhost:5290/userData/delete/${elemIndex}`,
@@ -122,13 +139,14 @@ function App() {
 
   const addElem = (newElem) => {
     let vedro = [...expensesList]
-
     axios({
       method: 'post',
       url: `http://localhost:5290/userData/add`,
       withCredentials: true,
       headers: { "Content-Type": "application/json" },
       data: JSON.stringify({
+        "id": 0,
+        "userId": newElem.userId,
         "expenseDescription": newElem.description,
         "amount": newElem.amount,
         "creationDate": `${newElem.date.year}-${Number(newElem.date.month)}-${newElem.date.day}`,
@@ -136,10 +154,11 @@ function App() {
       })
     })
       .then(response => {
-        console.log(response.data)
+        console.log(response.data);
         if (response.status === 200) {
           vedro.push({
-            expensesID: response.data.id,
+            id: response.data.id,
+            userId: response.data.userId,
             description: newElem.description,
             amount: newElem.amount,
             category: newElem.category,

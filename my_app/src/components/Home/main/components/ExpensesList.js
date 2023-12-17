@@ -9,7 +9,6 @@ const ExpensesList = (props) => {
 
     const [expensesList, setExpensesList] = useState(props.expList)
 
-    console.log(props)
 
     let filteredList = []
     if (props.filterValue !== "nothing") {

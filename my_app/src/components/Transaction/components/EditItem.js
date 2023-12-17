@@ -22,6 +22,8 @@ const EditItem = (props) => {
 
     const editItemHandler = () => {
         const newExpenses = {
+            id: props.itemToEdit.id,
+            userId: props.itemToEdit.userId,
             description: descValue,
             amount: Number(moneyValue),
             category: Object.values(props.filterConverter)[Object.keys(props.filterConverter).indexOf(currentCategory)],
