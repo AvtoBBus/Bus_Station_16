@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj": {}
+    "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj": {}
   },
   "projects": {
-    "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj": {
+    "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj",
         "projectName": "CsvImportProcessorsLibrary",
-        "projectPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj",
-        "packagesPath": "C:\\Users\\miste\\.nuget\\packages\\",
-        "outputPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\obj\\",
+        "projectPath": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj",
+        "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\miste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {
-                "projectPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj"
+              "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {
+                "projectPath": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj"
               }
             }
           }
@@ -73,24 +74,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {
+    "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+        "projectUniqueName": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
         "projectName": "ExpensesWebServer",
-        "projectPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
-        "packagesPath": "C:\\Users\\miste\\.nuget\\packages\\",
-        "outputPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\obj\\",
+        "projectPath": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\ExpensesWebServer.csproj",
+        "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\ExpensesWebServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\miste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -99,6 +100,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -120,6 +122,14 @@
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
+            },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.55, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             },
             "Microsoft.AspNet.WebApi.Core": {
               "target": "Package",
@@ -177,24 +187,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj": {
+    "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj",
+        "projectUniqueName": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj",
         "projectName": "Tester",
-        "projectPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj",
-        "packagesPath": "C:\\Users\\miste\\.nuget\\packages\\",
-        "outputPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\Tester\\obj\\",
+        "projectPath": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\Tester\\Tester.csproj",
+        "packagesPath": "C:\\Users\\globa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\Tester\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\miste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\globa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -203,14 +213,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj": {
-                "projectPath": "D:\\учёба\\для себя\\Bus_Station_16\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj"
+              "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj": {
+                "projectPath": "C:\\Users\\globa\\Documents\\c_hashtag\\Expenses\\ExpensesWebServer\\ApplicationServer\\CsvImportProcessorsLibrary\\CsvImportProcessorsLibrary.csproj"
               }
             }
           }
@@ -240,7 +251,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

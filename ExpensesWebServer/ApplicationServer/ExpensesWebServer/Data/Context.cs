@@ -27,6 +27,8 @@ namespace ExpensesWebServer.Data
             modelBuilder.Entity<User>().HasIndex(u => u.UserLogin).IsUnique();
             modelBuilder.Entity<User>().HasAlternateKey(u => u.UserLogin);
 
+            modelBuilder.Entity<User>().HasIndex(u => u.Email).IsUnique();
+
             modelBuilder.Entity<Expense>().HasIndex(u => u.Category);
 
             modelBuilder.Entity<User>().HasData(new User

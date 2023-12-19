@@ -23,24 +23,16 @@ namespace ExpensesWebServer.Controllers
             _expenseReposirity = expensesRepository;
             _jwtService = jwtService;
         }
-        private JwtSecurityToken? JwtSecurityToken()
-        {
-            JwtSecurityToken verifiedJWT;
-            var jwt = Request.Cookies["jwt"];
-            if (jwt == null)
-            {
-                _logger.LogError($"Error reading jwt\nMessage: jwt not found in cookies\n");
-                return null;
-            }
-            verifiedJWT = _jwtService.verify(jwt);
-            return verifiedJWT;
-        }
         [HttpPost]
         [Route("getAllBetweenDates")]
         public async Task<IActionResult> GetAllBetweenDates(DatesDTO dto)
         {
-            var verifiedJWT = JwtSecurityToken();
-            if (verifiedJWT == null) return Unauthorized();
+            var verifiedJWT = _jwtService.JwtSecurityToken(Request);
+            if (verifiedJWT == null)
+            {
+                _logger.LogWarning("JWT was not found");
+                return Unauthorized();
+            }
             int userId;
             try
             {
@@ -51,7 +43,7 @@ namespace ExpensesWebServer.Controllers
                 _logger.LogError($"Error parsing issuer\nMessage:{ex.Message}\n");
                 throw;
             }
-            return Ok(await _expenseReposirity.GerRangeBetweenDatesById(
+            return Ok(await _expenseReposirity.GetRangeBetweenDatesById(
                                 userId,
                                 DateOnly.Parse(dto.StartDate),
                                 DateOnly.Parse(dto.StopDate)));
@@ -60,8 +52,12 @@ namespace ExpensesWebServer.Controllers
         [Route("getAll")]
         public async Task<IActionResult> GetAllExpenses()
         {
-            var verifiedJWT = JwtSecurityToken();
-            if(verifiedJWT == null) return Unauthorized();
+            var verifiedJWT = _jwtService.JwtSecurityToken(Request);
+            if (verifiedJWT == null)
+            {
+                _logger.LogWarning("JWT was not found");
+                return Unauthorized();
+            }
             int userId;
             try
             {
@@ -79,10 +75,13 @@ namespace ExpensesWebServer.Controllers
         [Route("add")]
         public async Task<IActionResult> Add(Expense obj)
         {
-            var verifiedJWT = JwtSecurityToken();
-            if (verifiedJWT == null) return Unauthorized();
+            var verifiedJWT = _jwtService.JwtSecurityToken(Request);
+            if (verifiedJWT == null)
+            {
+                _logger.LogWarning("JWT was not found");
+                return Unauthorized();
+            }
 
-            obj.UserId = int.Parse(verifiedJWT.Issuer);
             try
             {
                 await _expenseReposirity.CreateAsync(obj);
@@ -98,8 +97,12 @@ namespace ExpensesWebServer.Controllers
         [Route("delete/{id}")]
         public IActionResult Delete(int id)
         {
-            var verifiedJWT = JwtSecurityToken();
-            if (verifiedJWT == null) return Unauthorized();
+            var verifiedJWT = _jwtService.JwtSecurityToken(Request);
+            if (verifiedJWT == null)
+            {
+                _logger.LogWarning("JWT was not found");
+                return Unauthorized();
+            }
 
             try
             {
@@ -116,10 +119,13 @@ namespace ExpensesWebServer.Controllers
         [Route("update")]
         public IActionResult Update(Expense obj)
         {
-            var verifiedJWT = JwtSecurityToken();
-            if (verifiedJWT == null) return Unauthorized();
+            var verifiedJWT = _jwtService.JwtSecurityToken(Request);
+            if (verifiedJWT == null)
+            {
+                _logger.LogWarning("JWT was not found");
+                return Unauthorized();
+            }
 
-            //obj.UserId = int.Parse(verifiedJWT.Issuer);
             try
             {
                 _expenseReposirity.Update(obj);
