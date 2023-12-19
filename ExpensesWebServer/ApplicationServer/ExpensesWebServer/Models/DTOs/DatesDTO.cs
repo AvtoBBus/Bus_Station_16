@@ -1,8 +1,7 @@
-﻿namespace ExpensesWebServer.Models.DTOs
+﻿namespace ExpensesWebServer.Models.DTOs;
+
+public struct DatesDTO
 {
-    public struct DatesDTO
-    {
-        public string StartDate { get; set; }
-        public string StopDate { get; set; }
-    }
+    public string StartDate { get; set; }
+    public string StopDate { get; set; }
 }

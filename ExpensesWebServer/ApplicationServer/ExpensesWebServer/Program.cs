@@ -1,10 +1,8 @@
 using ExpensesWebServer.Data;
 using ExpensesWebServer.Services;
 using Microsoft.EntityFrameworkCore;
-using OfficeOpenXml;
 
 var builder = WebApplication.CreateBuilder(args);
-//123
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -34,7 +32,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:3000"));
-
-ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
 app.Run();
