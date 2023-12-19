@@ -63,7 +63,8 @@ namespace ExpensesWebServer.Controllers
                 HttpOnly = true
             });
 
-            return Ok();
+            if (user.Email != null) return Ok(user.Email);
+            else return Ok(string.Empty);
         }
         [HttpPost("logout")]
         public IActionResult Logout()

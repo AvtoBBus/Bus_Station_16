@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace ExpensesWebServer.Models.Entities
 {
@@ -9,7 +9,6 @@ namespace ExpensesWebServer.Models.Entities
      */
     public class User
     {
-
         // Поле Id является UID для User
         [Required]
         [Key]
@@ -17,6 +16,9 @@ namespace ExpensesWebServer.Models.Entities
         // Логин User'a является уникальным
         [Required]
         public string UserLogin { get; set; }
+        // Email User'a является уникальным
+        [JsonIgnore]
+        public string? Email {get;set;}
         // Пароль пользователя. Требования: https://support.kaspersky.com/KPC/1.0/ru-RU/183862.html
         [Required]
         [JsonIgnore]

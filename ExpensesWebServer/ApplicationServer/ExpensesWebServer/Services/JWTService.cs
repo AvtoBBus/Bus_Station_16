@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Azure.Core;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 
@@ -7,6 +8,17 @@ namespace ExpensesWebServer.Services
     public class JWTService
     {
         private string secureKey = "change me please change me please";
+        public JwtSecurityToken? JwtSecurityToken(HttpRequest request)
+        {
+            JwtSecurityToken verifiedJWT;
+            var jwt = request.Cookies["jwt"];
+            if (jwt == null)
+            {
+                return null;
+            }
+            verifiedJWT = verify(jwt);
+            return verifiedJWT;
+        }
         public string generate(int id)
         {
             var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secureKey));

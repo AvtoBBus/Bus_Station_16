@@ -14,6 +14,12 @@ namespace ExpensesWebServer.Data
             _context = context;
         }
 
+        public async Task<int> AddRangeAsync(List<Expense> entites)
+        {
+            await _context.Expenses.AddRangeAsync(entites);
+            return _context.SaveChanges();
+        }
+
         public async Task<int> CreateAsync(Expense entity)
         {
             await _context.Expenses.AddAsync(entity);
@@ -44,7 +50,7 @@ namespace ExpensesWebServer.Data
 
         public Task<List<Expense>> GetListOfObjects() => _context.Expenses.ToListAsync();
 
-        public async Task<List<Expense>> GerRangeBetweenDatesById(int id, DateOnly start, DateOnly stop)
+        public async Task<List<Expense>> GetRangeBetweenDatesById(int id, DateOnly start, DateOnly stop)
         {
             List<Expense> expenses;
             var test = _context.Expenses.First().CreationDate;

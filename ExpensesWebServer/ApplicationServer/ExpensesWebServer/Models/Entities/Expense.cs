@@ -26,6 +26,15 @@ namespace ExpensesWebServer.Models.Entities
         public DateOnly CreationDate { get; set; }
         // Category - тип траты
         [Required]
-        public int Category { get; set; }
+        public Categories Category { get; set; }
     }
+}
+public enum Categories
+{
+    Etc, // Прочее
+    Food, // Продукты питания
+    Transport, // Транспорт
+    Accomondation, // Жилье
+    EnterpriseAndLeisure, // Развлечения и досуг
+    HealthAndMedicine // Здоровье и медицина
 }
