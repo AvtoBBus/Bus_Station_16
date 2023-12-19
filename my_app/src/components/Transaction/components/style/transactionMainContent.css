@@ -3,3 +3,27 @@
     height: 843px;
     background-color: rgb(235, 233, 255);
 }
+
+.showRepeat {
+    display: flex;
+    flex-direction: row;
+    width: 340px;
+    height: 35px;
+    position: absolute;
+    left: 1260px;
+    top: 90px;
+    background-color: #928dcc;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.showRepeatInput {
+    background-color: #bebbe0;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.showRepeatLabel {
+    color: #f0f8ff;
+    text-shadow: 0px 0px 7px #ffffff59;
+}

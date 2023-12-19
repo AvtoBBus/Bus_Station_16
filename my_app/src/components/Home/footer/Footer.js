@@ -1,5 +1,5 @@
 import "./style/Footer.css"
-import FooterCard from "./footerCard"
+import FooterCard from "./FooterCard"
 import GitHub_logo from "./data/img/GitHub_logo.png"
 import AvtoBBus_img from "./data/img/AvtoBBus_img.jfif"
 import Mestromezer_img from "./data/img/mestromezer_img.jfif"

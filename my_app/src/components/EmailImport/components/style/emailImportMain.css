@@ -1,0 +1,66 @@
+.emailImportMain {
+    height: 843px;
+    background-color: rgb(235, 233, 255);
+}
+
+.emailInput {
+    position: absolute;
+    top: 360px;
+    left: 100px;
+    background-color: #bebbe0;
+    border-radius: 30px;
+    padding: 10px;
+    width: 750px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userEmailText {
+    font-size: 28px;
+}
+
+.userEmail {
+    width: 95%;
+    margin-top: 7px;
+    border: 2px solid #514b9952;
+    border-radius: 10px;
+    background-color: #cdcbde;
+    font-size: 25px;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.saveSettingButton {
+    position: absolute;
+    top: 500px;
+    left: 240px;
+    width: 494px;
+    height: 70px;
+    background-color: #928DCC;
+    border: 0px;
+    border-radius: 20px;
+    font-size: 25px;
+    color: #d5d4e1;
+    transition: 0.2s all ease;
+}
+
+
+.saveSettingButton:hover {
+    transition-duration: 0.2s;
+    color: #a199ff;
+}
+
+
+@keyframes sendUploadedFile {
+    from {
+        color: #d5d4e1;
+    }
+
+    to {
+        color: #a199ff;
+    }
+
+}

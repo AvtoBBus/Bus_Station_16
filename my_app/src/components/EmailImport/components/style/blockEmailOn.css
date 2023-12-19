@@ -1,10 +1,10 @@
 .blockEmailNottification {
     position: absolute;
-    left: 1670px;
-    top: 350px;
+    left: 240px;
+    top: 200px;
     display: flex;
-    flex-direction: column;
-    width: 166.59px;
+    flex-direction: row;
+    width: 450px;
     color: aliceblue;
     background-color: #928dcc;
     border: 2px solid #928dcc;
@@ -16,30 +16,20 @@
 .boxSetting {
     width: auto;
     height: 40px;
+    margin-right: 20px;
     margin-bottom: 10px;
     border-radius: 40px;
     background-color: aliceblue;
 }
 
 .settingText {
+    font-size: 30px;
     text-shadow: 2px 2px 2px black;
+    margin-top: 4px;
 }
 
 
-.emailInput {
-    margin: 20px 0px 0px 0px;
-    background-color: #bebbe0;
-    border-radius: 30px;
-    padding: 10px;
-}
-
-.userEmailText {
-    font-size: 13px;
-}
-
-.userEmail {
-    width: 95%;
-    border: 2px solid #514b9952;
-    border-radius: 10px;
-    background-color: #cdcbde;
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+    transform: scale(2.9);
 }

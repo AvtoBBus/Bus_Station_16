@@ -22,7 +22,7 @@ const SignIn = (props) => {
     }
 
     const checkInputName = (strToCheck) => {
-        const regex = new RegExp("(_{1,2})?[a-zA-Z0-9]{2,}(_{1,2})?")
+        const regex = new RegExp("(_{1,2})?[a-zA-Z0-9]{2,}(_{1,2})?");
         if (strToCheck.match(regex) === null) {
             return false
         }

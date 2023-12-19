@@ -5,7 +5,6 @@ import DragAndDropInput from "./DragAndDropInput";
 import ShowUploadedFile from "./ShowUploadedFile"
 import ButtonAddToList from "./ButtonAddToList"
 import axios from "axios";
-import { redirect } from "react-router-dom";
 
 
 const ImportMain = (props) => {
@@ -26,12 +25,13 @@ const ImportMain = (props) => {
         var reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = function () {
-            axios.post(`http://localhost:5290/testController/UploadFile`, reqData,
-                {
-                    withCredentials: true,
-                    headers: { "Content-Type": "multipart/form-data" }
-                })
-                .then(response => console.log(response))
+            console.log(reader.result);
+            // axios.post(`http://localhost:5290/testController/UploadFile`, reqData,
+            //     {
+            //         withCredentials: true,
+            //         headers: { "Content-Type": "multipart/form-data" }
+            //     })
+            //     .then(response => console.log(response))
         }
 
 

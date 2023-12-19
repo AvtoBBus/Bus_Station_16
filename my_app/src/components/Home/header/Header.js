@@ -17,6 +17,9 @@ const Header = (props) => {
             <Link to="/export" style={{ color: "rgb(0,0,0)" }}>
                 <HeaderCard className="exportPage" text="Экспорт" />
             </Link>
+            <Link to="/emailImport" style={{ color: "rgb(0,0,0)" }}>
+                <HeaderCard className="emailImportPage" text="Почта" />
+            </Link>
         </div>
     </>
 }

@@ -8,6 +8,7 @@ import Transaction from "./components/Transaction/Transaction";
 import { useState } from "react";
 import ImportPage from "./components/Import/ImportPage";
 import ExportPage from "./components/Export/ExportPage";
+import EmailImportPage from "./components/EmailImport/EmailImportPage"
 import axios from 'axios'
 
 
@@ -207,6 +208,12 @@ function App() {
           <Route path="/export" element={
             <PrivateRoute>
               <ExportPage />
+            </PrivateRoute>
+          }></Route>
+
+          <Route path="/emailImport" element={
+            <PrivateRoute>
+              <EmailImportPage />
             </PrivateRoute>
           }></Route>
 
