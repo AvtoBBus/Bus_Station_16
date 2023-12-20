@@ -1,11 +1,15 @@
 import { useState } from "react"
 import "./style/blockEmailOn.css"
-
+import Fade from "react-reveal/Fade"
+import axios from "axios";
+import checkedImage from "./data/img/checked.png"
 
 const BlockEmailOn = (props) => {
 
-    const [emailSetting, setEmailSetting] = useState(false);
-    const [userEmail, setUserEmail] = useState("");
+    const [emailSetting, setEmailSetting] = useState(props.userEmail.length === 0 ? false : true);
+    const [userEmail, setUserEmail] = useState(props.userEmail);
+
+    const [anim, setAnim] = useState(false);
 
     const emailSettingHandler = () => {
         setEmailSetting(!emailSetting);
@@ -21,8 +25,26 @@ const BlockEmailOn = (props) => {
 
 
     const saveHandler = () => {
+        let emailToSend = "";
         if (checkEmail(userEmail)) {
-            console.log(userEmail);
+            if (!emailSetting) {
+                emailToSend = "";
+            }
+            else {
+                emailToSend = `?email=${userEmail}`;
+            }
+            axios({
+                method: 'post',
+                url: `http://localhost:5290/setEmail${emailToSend}`,
+                withCredentials: true
+            })
+                .then(response => {
+                    if (response.status === 200) {
+                        setAnim(true);
+                        setTimeout(setAnim, 1500, false);
+                    }
+                })
+                .catch(error => alert(error))
         }
         else {
             alert("bad email");
@@ -31,7 +53,7 @@ const BlockEmailOn = (props) => {
 
     return <>
         <div className="blockEmailNottification">
-            <input type="checkbox" name="boxSetting" className="boxSetting" onChange={emailSettingHandler} />
+            <input type="checkbox" name="boxSetting" className="boxSetting" onChange={emailSettingHandler} checked={emailSetting} />
             <label for="boxSetting" className="settingText">Добавлять через почту</label>
         </div>
         {emailSetting ?
@@ -40,10 +62,13 @@ const BlockEmailOn = (props) => {
                     <p className="userEmailText">Введите email с которого получать данные</p>
                     <input type="email" name="userEmail" className="userEmail" value={userEmail} onChange={(event) => setUserEmail(event.target.value)} />
                 </div>
-                <div>
-                    <button className="saveSettingButton" onClick={saveHandler}>Сохранить</button>
-                </div>
             </> : <></>}
+        <Fade left when={anim}>
+            <img className="imgChecked" src={checkedImage} />
+        </Fade>
+        <div>
+            <button className="saveSettingButton" onClick={saveHandler}>Сохранить</button>
+        </div>
     </>
 }
 

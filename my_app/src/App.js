@@ -31,23 +31,15 @@ function App() {
   ]
   const filterConverter = {
     "Фильтр": "nothing",
-    "Автомобиль": "auto",
-    "Одежда": "clothes",
     "Продукты": "food",
-    "Здоровье": "health",
-    "Уход за собой": "selfCare",
-    "Спорт": "sport",
-    "Кафе и рестораны": "cafe",
-    "Электроника": "electronics",
-    "Дом, ремонт": "home",
     "Транспорт": "transport",
-    "Путешествия": "travel",
-    "Переводы": "transaction",
-    "Прочее": "other",
+    "Жильё": "home",
+    "Развлечения": "cafe",
+    "Здоровье": "health",
   }
 
-  const [expensesList, setExpensesList] = useState([])
-  console.log(expensesList);
+  const [expensesList, setExpensesList] = useState([]);
+  const [userEmail, setUserEmail] = useState("");
   // axios.interceptors.response.use(function (response) {
   //   console.log(response);
   //   return response;
@@ -183,6 +175,11 @@ function App() {
     setExpensesList([]);
   }
 
+  const userEmailHandler = (email) => {
+    setUserEmail(email);
+  }
+
+
   return <>
     <AuthProvider>
       <div className="app">
@@ -213,11 +210,11 @@ function App() {
 
           <Route path="/emailImport" element={
             <PrivateRoute>
-              <EmailImportPage />
+              <EmailImportPage userEmail={userEmail} />
             </PrivateRoute>
           }></Route>
 
-          <Route path="/login" element={<LoginPage startGetList={startGetListHandler} />} />
+          <Route path="/login" element={<LoginPage startGetList={startGetListHandler} userEmailHandler={userEmailHandler} />} />
         </Routes>
       </div>
     </AuthProvider>
