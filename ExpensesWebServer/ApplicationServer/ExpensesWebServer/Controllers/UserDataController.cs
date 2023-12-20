@@ -1,9 +1,11 @@
 ﻿using ClosedXML.Excel;
+using CsvImportProcessorsLibrary;
 using ExpensesWebServer.Data;
 using ExpensesWebServer.Models.DTOs;
 using ExpensesWebServer.Models.Entities;
 using ExpensesWebServer.Services;
 using Microsoft.AspNetCore.Mvc;
+using OfficeOpenXml;
 
 namespace ExpensesWebServer.Controllers;
 
@@ -154,6 +156,24 @@ public class UserDataController : Controller
         return Ok(obj);
     }
     /// <summary>
+    /// Import from xlsx file
+    /// </summary>
+    /// <param name="file"></param>
+    /// <returns></returns>
+    [HttpPost]
+    [Route("import")]
+    public async Task<IActionResult> Import(ExcelPackage file)
+    {
+        var verifiedJWT = _jwtService.JwtSecurityToken(Request);
+        if (verifiedJWT == null)
+        {
+            _logger.LogWarning("JWT was not found");
+            return Unauthorized();
+        }
+        var expensesRow  = SberbankCsvProcessor.ProcessXlsx(file);
+        return Ok();
+    }
+    /// <summary>
     /// Returns xlsx file 
     /// </summary>
     /// <param name="dto">Dates [start,stop]</param>
@@ -187,7 +207,7 @@ public class UserDataController : Controller
             worksheet.Cell(1, 2).Value = "Сумма";
             worksheet.Cell(1, 3).Value = "Дата";
 
-            int currentRow = 2;
+            var currentRow = 2;
             foreach (var item in data)
             {
                 worksheet.Cell(currentRow, 1).Value = item.ExpenseDescription;

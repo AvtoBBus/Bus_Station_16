@@ -108,3 +108,10 @@ C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\
 C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\SixLabors.Fonts.dll
 C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.IO.Packaging.dll
 C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\XLParser.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\EPPlus.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\EPPlus.Interfaces.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\EPPlus.System.Drawing.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Office.Interop.Excel.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\CsvImportProcessorsLibrary.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\CsvImportProcessorsLibrary.pdb

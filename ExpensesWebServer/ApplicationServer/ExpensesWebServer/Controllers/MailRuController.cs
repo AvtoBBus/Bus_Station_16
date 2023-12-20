@@ -14,12 +14,15 @@ public class MailRuController : Controller
     private JWTService _jwtService; // Сервис для работы с JWT
     private IUserRepository _userRepository; // Интерфейс бд для работы с юзерами
     private IExpenseRepository _expenseRepository; // Интерфейс бд для работы с тратами
+    private EmailReceiptsProvider _emailReceiptsProvider;
     public MailRuController(
+        EmailReceiptsProvider mailProvider,
         ILogger<UserDataController> logger,
         IUserRepository userRepository,
         IExpenseRepository expenseRepository,
         JWTService jwtService)
     {
+        _emailReceiptsProvider = mailProvider;
         _logger = logger;
         _userRepository = userRepository;
         _expenseRepository = expenseRepository;
@@ -40,12 +43,30 @@ public class MailRuController : Controller
             _logger.LogWarning("JWT was not found");
             return Unauthorized();
         }
-
-        var user = await _userRepository.GetByIdAsync(int.Parse(verifiedJWT.Issuer));
+        int userId;
+        if (!int.TryParse(verifiedJWT.Issuer, out userId))
+        {
+            _logger.LogError("Error parsing issuer");
+            return BadRequest("Error parsing issuer");
+        }
+        var user = await _userRepository.GetByIdAsync(userId);
         user.Email = email;
         _userRepository.Update(user);
 
-        return Ok();
+        var mailProvider = new EmailReceiptsProvider();
+        List<Expense> expenses;
+        try
+        {
+            expenses = mailProvider.FetchReceitps(user.Email);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError($"Error fetching from mail.\nMessage:{ex.Message}\nUserId:{userId}");
+            return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+        }
+        foreach (var expense in expenses) expense.UserId = userId;
+
+        return Created("Added new expenses:",await _expenseRepository.AddRangeAsync(expenses));
     }
     /// <summary>
     /// Initialize fetching expenses from mail

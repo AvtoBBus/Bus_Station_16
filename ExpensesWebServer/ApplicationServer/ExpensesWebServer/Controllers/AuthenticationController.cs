@@ -56,7 +56,7 @@ public class AuthenticationController : Controller
 
         if (user.UserPassword != dto.Password) return BadRequest("Неверный пароль");
 
-        var token = _jwtService.generate(user.Id);
+        var token = _jwtService.Generate(user.Id);
         Response.Cookies.Append("jwt", token, new CookieOptions
         {
             HttpOnly = true

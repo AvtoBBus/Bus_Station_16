@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CsvImportProcessorsLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad54f5c9f65c3426d3b5f33f2b87db89cb9a0920")]
 [assembly: System.Reflection.AssemblyProductAttribute("CsvImportProcessorsLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CsvImportProcessorsLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
