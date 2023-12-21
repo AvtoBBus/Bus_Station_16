@@ -4,13 +4,13 @@ using System.Globalization;
 namespace ExpensesWebServer.Services.Parsers;
 public static class DefaultParser
 {
-    private static Regex _amountRegex = new Regex(@"(?<!\d)(\d+[\.,]\d{2})(?!(\.\d{2}|,\d{2}))");
-    private static Regex _dateRegex = new Regex(@"\b\d{2}[-/.]\d{2}[-/.]\d{4}\b");
+    private static Regex _amountRegex = new(@"(?<!\d)(\d+[\.,]\d{2})(?!(\.\d{2}|,\d{2}))");
+    private static Regex _dateRegex = new(@"\b\d{2}[-/.]\d{2}[-/.]\d{4}\b");
     private static decimal? ParseAfterItog(string data)
     {
         decimal result;
 
-        int startIndex = data.IndexOf("ИТОГ", StringComparison.OrdinalIgnoreCase);
+        var startIndex = data.IndexOf("ИТОГ", StringComparison.OrdinalIgnoreCase);
         var substring = data.Substring(startIndex);
 
         var match = _amountRegex.Match(substring);
@@ -22,7 +22,7 @@ public static class DefaultParser
     public static decimal ConvertPriceToDecimal(string priceText)
     {
         // Remove currency symbol and any other non-numeric characters, except decimal separator
-        string processedPrice = System.Text.RegularExpressions.Regex.Match(priceText, @"\d+[,.]\d{2}").Value;
+        var processedPrice = System.Text.RegularExpressions.Regex.Match(priceText, @"\d+[,.]\d{2}").Value;
 
         // Assuming the price uses '.' as the decimal separator. If not, replace '.' with the correct separator
         processedPrice = processedPrice.Replace(",", CultureInfo.InvariantCulture.NumberFormat.NumberDecimalSeparator);

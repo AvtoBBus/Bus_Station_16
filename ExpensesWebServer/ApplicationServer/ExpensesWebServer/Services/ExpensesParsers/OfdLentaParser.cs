@@ -1,32 +1,31 @@
 ﻿using ExpensesWebServer.Models.Entities;
 using HtmlAgilityPack;
 
-namespace ExpensesWebServer.Services.Parsers
+namespace ExpensesWebServer.Services.Parsers;
+
+public class OfdLentaParser
 {
-    public class OfdLentaParser
+    public static List<Expense> Parse(HtmlDocument receiptHtml)
     {
-        public static List<Expense> Parse(HtmlDocument receiptHtml)
+        var expenseList = new List<Expense>();
+
+        var divsWithFiveTables = receiptHtml.DocumentNode.SelectNodes("//div[count(.//table)=5]");
+        if(divsWithFiveTables == null) return expenseList;  
+        foreach (var div in divsWithFiveTables)
         {
-            var expenseList = new List<Expense>();
+            var tdNodes = div.Elements("table").ToList();
 
-            var divsWithFiveTables = receiptHtml.DocumentNode.SelectNodes("//div[count(.//table)=5]");
-            if(divsWithFiveTables == null) return expenseList;  
-            foreach (var div in divsWithFiveTables)
+            var sc = new StringCategorizer();
+
+            expenseList.Add(new Expense()
             {
-                var tdNodes = div.Elements("table").ToList();
-
-                var sc = new StringCategorizer();
-
-                expenseList.Add(new Expense()
-                {
-                    ExpenseDescription = tdNodes[0].InnerText,
-                    Amount = DefaultParser.ConvertPriceToDecimal(tdNodes[1].InnerText),
-                    CreationDate = DefaultParser.ParseDate(receiptHtml),
-                    Category = sc.CategorizeString(tdNodes[0].InnerText)
-                });
-            }
-
-            return expenseList;
+                ExpenseDescription = tdNodes[0].InnerText,
+                Amount = DefaultParser.ConvertPriceToDecimal(tdNodes[1].InnerText),
+                CreationDate = DefaultParser.ParseDate(receiptHtml),
+                Category = sc.CategorizeString(tdNodes[0].InnerText)
+            });
         }
+
+        return expenseList;
     }
 }
