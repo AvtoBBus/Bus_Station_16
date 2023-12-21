@@ -4,7 +4,6 @@ using MailKit.Search;
 using MailKit;
 using ExpensesWebServer.Models.Entities;
 using ExpensesWebServer.Services.Parsers;
-using ExpensesWebServer.Data;
 
 namespace ExpensesWebServer.Services;
 

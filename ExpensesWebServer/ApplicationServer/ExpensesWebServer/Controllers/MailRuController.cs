@@ -72,7 +72,7 @@ public class MailRuController : Controller
     /// Initialize fetching expenses from mail
     /// </summary>
     /// <returns>Number of fetched expenses</returns>
-    [HttpGet]
+    /*[HttpGet]
     [Route("fetchExpensesFromMail")]
     public async Task<IActionResult> FetchExpensesFromMail()
     {
@@ -106,5 +106,5 @@ public class MailRuController : Controller
         foreach (var expense in expenses) expense.UserId = userId;
 
         return Ok(await _expenseRepository.AddRangeAsync(expenses));
-    }
+    }*/
 }

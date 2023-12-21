@@ -52,7 +52,7 @@ public class RegistrationController : Controller
     /// <returns></returns>
     [HttpPost]
     [Route("confirm")]
-    public async Task<IActionResult> RegisterHas(UserDTO dto)
+    public async Task<IActionResult> RegisterHash(UserDTO dto)
     {
         User vulnerableUser = await _userRepository.GetByLoginAsync(dto.Login);
         if (vulnerableUser == null) 
