@@ -4,6 +4,7 @@ using MailKit.Search;
 using MailKit;
 using ExpensesWebServer.Models.Entities;
 using ExpensesWebServer.Services.Parsers;
+using ExpensesWebServer.Data;
 
 namespace ExpensesWebServer.Services;
 
@@ -14,12 +15,12 @@ public class EmailReceiptsProvider : IDisposable
     {
         _imapClient.Connect("imap.mail.ru", 993, true);
         _imapClient.Authenticate("expences_buffer@mail.ru", "iCDeqSmYam2VqvAwrQr8");
-        _imapClient.Inbox.Open(FolderAccess.ReadOnly);
+        _imapClient.Inbox.Open(FolderAccess.ReadWrite);
     }
     private IList<UniqueId> GetUidsByMail(string? email)
     {
         IList<UniqueId> uids;
-        var criteria = SearchQuery.All;
+        var criteria = SearchQuery.NotSeen;
 
         if (email != null)
         {
@@ -29,8 +30,9 @@ public class EmailReceiptsProvider : IDisposable
         }
         else
         {
-            throw new NullReferenceException("Email was null");
+            uids = _imapClient.Inbox.Search(SearchQuery.NotSeen);
         }
+        foreach (var uid in uids) _imapClient.Inbox.AddFlags(uid, MessageFlags.Seen, true);
         return uids;
     }
     public List<Expense> FetchReceitps(string? email)

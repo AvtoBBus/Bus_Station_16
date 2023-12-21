@@ -16,7 +16,7 @@ builder.Services.AddScoped<IExpenseRepository,ExpeseRepository>();
 builder.Services.AddLogging();
 builder.Services.AddScoped<EmailReceiptsProvider>();
 //builder.Services.AddSingleton<MailMessagesListener>();
-//builder.Services.AddHostedService<MailMessagesListener>();
+builder.Services.AddHostedService<IdleListener>();
 builder.Services.AddScoped<JWTService>();
 builder.Services.AddCors();
 
