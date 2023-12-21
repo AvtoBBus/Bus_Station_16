@@ -7,18 +7,11 @@ const CircleDiagram = (props) => {
 
 
     const drawingData = {
-        "Автомобиль": 0,
-        "Одежда": 0,
         "Продукты": 0,
-        "Здоровье": 0,
-        "Уход за собой": 0,
-        "Спорт": 0,
-        "Кафе и рестораны": 0,
-        "Электроника": 0,
-        "Дом, ремонт": 0,
         "Транспорт": 0,
-        "Путешествия": 0,
-        "Прочее": 0,
+        "Жильё": 0,
+        "Развлечения": 0,
+        "Здоровье": 0,
     }
 
     for (let e of props.dataToFill) {
@@ -34,13 +27,13 @@ const CircleDiagram = (props) => {
         }
     }
 
-    let colors = []
-    for (let e of Object.keys(drawingData)) {
-        let r = Math.ceil(Math.random() * 255);
-        let g = Math.ceil(Math.random() * 255);
-        let b = Math.ceil(Math.random() * 255);
-        colors.push("rgba( " + r + ", " + g + ", " + b + ", 0.8");
-    }
+    let colors = [
+        "rgba(255, 0, 0, 0.8)",
+        "rgba(102, 178, 255, 0.8)",
+        "rgba(204, 204, 0, 0.8)",
+        "rgba(255, 153, 255, 0.8)",
+        "rgba(102, 255, 102, 0.8)"
+    ]
 
     if (flag) {
         return <>

@@ -6,7 +6,7 @@ import EmailImportMain from "./components/EmailImportMain"
 const EmailImportPage = (props) => {
     return <>
         <Header />
-        <EmailImportMain />
+        <EmailImportMain userEmail={props.userEmail} />
         <Footer />
     </>
 }

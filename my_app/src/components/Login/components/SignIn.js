@@ -62,6 +62,7 @@ const SignIn = (props) => {
                             })
                                 .then(function (response) {
                                     if (response.status === 200) {
+                                        props.userEmailHandler(response.data);
                                         axios.get(`http://localhost:5290/userData/getAll`, { withCredentials: true })
                                             .then(response => {
                                                 if (response.status === 200) {

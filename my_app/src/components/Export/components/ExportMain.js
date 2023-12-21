@@ -28,20 +28,53 @@ const ExportMain = (props) => {
 
     const getTableHandler = (event) => {
         event.preventDefault();
+        let end = new Date();
+        let start = 0;
 
-        if (dateStart > dateEnd) {
-            alert("ERROR!\nУКАЖИТЕ ПРАВИЛЬНУЮ ДАТУ НАЧАЛА И КОНЦА")
+        if (currentDateRange === "Выбранный промежуток") {
+
+            if (dateStart > dateEnd) {
+                alert("ERROR!\nУКАЖИТЕ ПРАВИЛЬНУЮ ДАТУ НАЧАЛА И КОНЦА")
+            }
+            else {
+                axios({
+                    method: 'post',
+                    url: `http://localhost:5290/userData/getAllBetweenDates`,
+                    withCredentials: true,
+                    headers: { "Content-Type": "application/json" },
+                    data: JSON.stringify({
+                        "startDate": dateStart,
+                        "stopDate": dateEnd
+                    })
+                })
+                    .then(response => console.log(response))
+            }
         }
         else {
+
+            if (currentDateRange === "Последняя неделя") {
+                start = new Date(end.getTime() - 7 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
+            }
+            else if (currentDateRange === "Последний месяц") {
+                start = new Date();
+                start = `${start.getFullYear()}-${start.getMonth()}-${start.getDate()}`
+            }
+            else if (currentDateRange === "Последний год") {
+                start = new Date();
+                start = `${start.getFullYear() - 1}-${start.getMonth() + 1}-${start.getDate()}`
+            }
             axios({
                 method: 'post',
-                url: `...endpoint...`,
+                url: `http://localhost:5290/userData/getAllBetweenDates`,
                 withCredentials: true,
+                headers: { "Content-Type": "application/json" },
                 data: JSON.stringify({
-                    "start": dateStart,
-                    "end": dateEnd
+                    "startDate": start,
+                    "stopDate": `${end.getFullYear()}-${end.getMonth() + 1}-${end.getDate()}`
                 })
+
             })
+                .then(response => console.log(response));
         }
     }
 

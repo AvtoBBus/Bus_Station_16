@@ -39,7 +39,7 @@ const SignOut = (props) => {
     return <>
         <div className="signOutContainer">
             <div className="userName">User name</div>
-            <div className="userName Name">{convertStr(user.userName)}</div>
+            <div className="userName Name" title={user.userName}>{convertStr(user.userName)}</div>
             <button className="signOutButton" onClick={signOutHandler}>выйти из аккаунта</button>
         </div>
     </>

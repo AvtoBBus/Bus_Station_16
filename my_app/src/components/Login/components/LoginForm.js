@@ -13,7 +13,7 @@ const LoginForm = (props) => {
         <label className="expensesLabel">EXPENSES</label>
         <div className="container">
             <SignUp authHandler={authHandlerSignUp} />
-            <SignIn startReqDB={props.startReqDB} />
+            <SignIn startReqDB={props.startReqDB} userEmailHandler={props.userEmailHandler} />
         </div>
     </>
 }

@@ -28,8 +28,15 @@
     margin-top: 4px;
 }
 
+.imgChecked {
+    position: absolute;
+    top: 500px;
+    left: 750px;
+    width: 70px;
+    height: 70px;
+}
 
-input[type="checkbox"]:checked,
-input[type="checkbox"]:not(:checked) {
+input[class="boxSetting"]:checked,
+input[class="boxSetting"]:not(:checked) {
     transform: scale(2.9);
 }

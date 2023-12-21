@@ -6,7 +6,7 @@ import "./style/emailImportMain.css"
 const EmailImportMain = (props) => {
     return <>
         <div className="emailImportMain">
-            <BlockEmailOn />
+            <BlockEmailOn userEmail={props.userEmail} />
             <Instruction />
         </div>
     </>

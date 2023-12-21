@@ -8,7 +8,7 @@ const LoginPage = (props) => {
     }
 
     return <>
-        <LoginForm authHandler={authHandlerSignUp} startReqDB={props.startGetList} />
+        <LoginForm authHandler={authHandlerSignUp} startReqDB={props.startGetList} userEmailHandler={props.userEmailHandler} />
         <Footer />
     </>
 }
