@@ -36,6 +36,7 @@ function App() {
     "Жильё": "home",
     "Развлечения": "cafe",
     "Здоровье": "health",
+    "Прочее": "other"
   }
 
   const [expensesList, setExpensesList] = useState([]);

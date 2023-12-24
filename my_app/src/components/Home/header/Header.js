@@ -1,5 +1,5 @@
 import "./style/Header.css"
-import HeaderCard from "./headerCard"
+import HeaderCard from "./HeaderCard"
 import { Link, Navigate, useNavigate } from "react-router-dom"
 
 const Header = (props) => {

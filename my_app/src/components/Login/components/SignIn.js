@@ -82,7 +82,6 @@ const SignIn = (props) => {
         }
     }
 
-    // console.log("$2a$11$0EueAhdK1uIiN8BgiAHvv." + hmacSHA384("Test123", CryptoJS.PBKDF2("Test123", "$2a$11$0EueAhdK1uIiN8BgiAHvv.")))
 
     return <>
         <div className="signInContainer">

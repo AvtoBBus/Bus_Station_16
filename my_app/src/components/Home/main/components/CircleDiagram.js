@@ -12,6 +12,7 @@ const CircleDiagram = (props) => {
         "Жильё": 0,
         "Развлечения": 0,
         "Здоровье": 0,
+        "Прочее": 0
     }
 
     for (let e of props.dataToFill) {
@@ -32,7 +33,8 @@ const CircleDiagram = (props) => {
         "rgba(102, 178, 255, 0.8)",
         "rgba(204, 204, 0, 0.8)",
         "rgba(255, 153, 255, 0.8)",
-        "rgba(102, 255, 102, 0.8)"
+        "rgba(102, 255, 102, 0.8)",
+        "rgba(160, 160, 160, 0.8)"
     ]
 
     if (flag) {

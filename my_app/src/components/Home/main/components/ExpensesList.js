@@ -21,7 +21,7 @@ const ExpensesList = (props) => {
     }
 
     const convertStr = (str) => {
-        return str.length > 4 ? str.slice(0, 5) + "..." : str;
+        return str ? str.length > 4 ? str.slice(0, 5) + "..." : str : "";
     }
 
     const renderRow = ({ index, style }) => {
