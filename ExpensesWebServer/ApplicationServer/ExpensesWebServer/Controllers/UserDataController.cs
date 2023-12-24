@@ -68,8 +68,30 @@ public class UserDataController : Controller
         int userId;
         if (!int.TryParse(verifiedJWT.Issuer, out userId))
         {
+<<<<<<< Updated upstream
             _logger.LogError("Error parsing issuer");
             return BadRequest("Error parsing issuer");
+=======
+            var verifiedJWT = _jwtService.JwtSecurityToken(Request);
+            if (verifiedJWT == null)
+            {
+                _logger.LogWarning("JWT was not found");
+                return Unauthorized();
+            }
+            int userId = int.Parse(verifiedJWT.Issuer);
+            obj.UserId = userId;
+            try
+            {
+                await _expenseReposirity.CreateAsync(obj);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Ошибка создания  записи траты\nСообщение:{ex.Message}");
+                return BadRequest("Ошибка создания  записи траты");
+            }
+            
+            return Ok(obj);
+>>>>>>> Stashed changes
         }
 
         return Ok(await _expenseReposirity.GetByIdAsync(userId));

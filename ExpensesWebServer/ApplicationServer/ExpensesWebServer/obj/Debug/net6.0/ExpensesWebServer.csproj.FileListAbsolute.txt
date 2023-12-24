@@ -1,0 +1,216 @@
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\appsettings.json
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.exe
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.deps.json
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.runtimeconfig.json
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.pdb
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Humanizer.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.csproj.AssemblyReference.cache
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.AssemblyInfoInputs.cache
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.AssemblyInfo.cs
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.csproj.CoreCompileInputs.cache
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.sourcelink.json
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets\msbuild.ExpensesWebServer.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets\msbuild.build.ExpensesWebServer.props
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ExpensesWebServer.props
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ExpensesWebServer.props
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\scopedcss\bundle\ExpensesWebServer.styles.css
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.csproj.CopyComplete
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\refint\ExpensesWebServer.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.pdb
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.genruntimeconfig.cache
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ref\ExpensesWebServer.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\HtmlAgilityPack.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\MailKit.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\MimeKit.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Formats.Asn1.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
+C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\libman.json
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\appsettings.Development.json
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\appsettings.json
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\libman.json
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.exe
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.deps.json
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.runtimeconfig.json
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.pdb
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Azure.Core.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Azure.Identity.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\BCrypt.Net-Next.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\HtmlAgilityPack.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Humanizer.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\MailKit.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Web.Http.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\MimeKit.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.CodeDom.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Formats.Asn1.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Memory.Data.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Text.Json.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.csproj.AssemblyReference.cache
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.AssemblyInfoInputs.cache
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.AssemblyInfo.cs
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.csproj.CoreCompileInputs.cache
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.MvcApplicationPartsAssemblyInfo.cs
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.MvcApplicationPartsAssemblyInfo.cache
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets\msbuild.ExpensesWebServer.Microsoft.AspNetCore.StaticWebAssets.props
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets\msbuild.build.ExpensesWebServer.props
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ExpensesWebServer.props
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ExpensesWebServer.props
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets.pack.json
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets.build.json
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\staticwebassets.development.json
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\scopedcss\bundle\ExpensesWebServer.styles.css
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.csproj.CopyComplete
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\refint\ExpensesWebServer.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.pdb
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ExpensesWebServer.genruntimeconfig.cache
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\obj\Debug\net6.0\ref\ExpensesWebServer.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ClosedXML.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\EPPlus.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\EPPlus.Interfaces.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\EPPlus.System.Drawing.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExcelNumberFormat.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Irony.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\SixLabors.Fonts.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.IO.Packaging.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\XLParser.dll
