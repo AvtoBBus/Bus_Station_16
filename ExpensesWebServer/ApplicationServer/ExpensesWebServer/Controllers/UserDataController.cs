@@ -16,6 +16,7 @@ public class UserDataController : Controller
     private ILogger _logger; // Логгер в stdout
     private JWTService _jwtService; // Сервис для работы с JWT
     private IExpenseRepository _expenseReposirity; // Интерфейс бд для работы с тратами
+    private XlsxFileProcessor _xlsxFileProcessor = new();
     public UserDataController(
         ILogger<UserDataController> logger,
         IExpenseRepository expensesRepository,
@@ -111,7 +112,7 @@ public class UserDataController : Controller
             _logger.LogWarning("JWT was not found");
             return Unauthorized();
         }
-
+        obj.UserId = int.Parse(verifiedJWT.Issuer);
         try
         {
             await _expenseReposirity.CreateAsync(obj);
@@ -184,16 +185,27 @@ public class UserDataController : Controller
     /// <returns></returns>
     [HttpPost]
     [Route("import")]
-    public async Task<IActionResult> Import(ExcelPackage file)
+    public async Task<IActionResult> Import(IFormFile file)
     {
+        if (!file.FileName.Contains(".xlsx")) return BadRequest("File type not supported");
         var verifiedJWT = _jwtService.JwtSecurityToken(Request);
         if (verifiedJWT == null)
         {
             _logger.LogWarning("JWT was not found");
             return Unauthorized();
         }
-        var expensesRow  = SberbankCsvProcessor.ProcessXlsx(file);
-        return Ok();
+        var userId = int.Parse(verifiedJWT.Issuer);
+        using (var stream = new MemoryStream())
+        {
+            file.CopyTo(stream);
+            using (var workbook = new ExcelPackage(stream))
+            {
+                var expensesRow = _xlsxFileProcessor.ProcessXlsx(workbook);
+                foreach (var expense in expensesRow) expense.UserId = userId;
+                _expenseReposirity.AddRangeAsync(expensesRow);
+                return Ok(expensesRow);
+            }
+        }
     }
     /// <summary>
     /// Returns xlsx file 
