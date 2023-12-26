@@ -103,7 +103,6 @@ C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\
 C:\Users\globa\Documents\c_hashtag\Expenses\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\libman.json
 D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\appsettings.Development.json
 D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\appsettings.json
-D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\libman.json
 D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.exe
 D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.deps.json
 D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\ExpensesWebServer.runtimeconfig.json
@@ -214,3 +213,6 @@ D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer
 D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\SixLabors.Fonts.dll
 D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.IO.Packaging.dll
 D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\XLParser.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Office.Interop.Excel.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\CsvImportProcessorsLibrary.dll
+D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\CsvImportProcessorsLibrary.pdb

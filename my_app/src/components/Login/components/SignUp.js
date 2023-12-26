@@ -80,10 +80,12 @@ const SignUp = (props) => {
                                 .then(response => {
                                     alert("Вы успешно зарегистрировались, теперь вы можете войти в свой аккаунт!")
                                 })
+                                .catch(er => alert(er.data));
 
                         }
                     }
                     )
+                    .catch(er => alert(er.data));
             }
         }
     }

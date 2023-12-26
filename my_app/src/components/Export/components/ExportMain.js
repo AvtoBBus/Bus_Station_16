@@ -48,6 +48,7 @@ const ExportMain = (props) => {
                     })
                 })
                     .then(response => console.log(response))
+                    .catch(er => alert(er));
             }
         }
         else {
@@ -74,7 +75,8 @@ const ExportMain = (props) => {
                 })
 
             })
-                .then(response => console.log(response));
+                .then(response => console.log(response))
+                .catch(er => alert(er));
         }
     }
 

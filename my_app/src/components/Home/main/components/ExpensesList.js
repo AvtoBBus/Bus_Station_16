@@ -30,7 +30,7 @@ const ExpensesList = (props) => {
             {index % 2 ? <></> : <div className='expensesListWall' style={style} />}
             <div className="expensesListItem" style={style}>
                 <div className='itemRightContent'>
-                    <p className="itemDescription">{convertStr(item.description)}</p>
+                    <p className="itemDescription" title={item.description}>{convertStr(item.description)}</p>
                     <p className="itemMoneyText">Money:</p>
                     <p className="itemMoney">{convertStr(String(item.amount))}</p>
                 </div>

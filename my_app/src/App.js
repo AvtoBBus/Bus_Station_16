@@ -31,12 +31,12 @@ function App() {
   ]
   const filterConverter = {
     "Фильтр": "nothing",
+    "Прочее": "other",
     "Продукты": "food",
     "Транспорт": "transport",
     "Жильё": "home",
     "Развлечения": "cafe",
     "Здоровье": "health",
-    "Прочее": "other"
   }
 
   const [expensesList, setExpensesList] = useState([]);

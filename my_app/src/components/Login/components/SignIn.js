@@ -75,9 +75,11 @@ const SignIn = (props) => {
                                     }
                                 }
                                 )
+                                .catch(er => alert(er));
                         }
                     }
                     )
+                    .catch(er => alert(er));
             }
         }
     }
