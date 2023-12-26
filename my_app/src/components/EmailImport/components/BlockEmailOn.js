@@ -39,7 +39,7 @@ const BlockEmailOn = (props) => {
                 withCredentials: true
             })
                 .then(response => {
-                    if (response.status === 200) {
+                    if (response.status === 201) {
                         setAnim(true);
                         setTimeout(setAnim, 1500, false);
                     }

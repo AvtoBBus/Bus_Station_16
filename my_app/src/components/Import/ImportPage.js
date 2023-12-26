@@ -5,7 +5,7 @@ import ImportMain from "./components/ImportMain"
 const ImportPage = (props) => {
     return <>
         <Header />
-        <ImportMain />
+        <ImportMain addElemsFromFile={props.addElemsFromFile} />
         <Footer />
     </>
 }

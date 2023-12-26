@@ -39,15 +39,22 @@ const ExportMain = (props) => {
             else {
                 axios({
                     method: 'post',
-                    url: `http://localhost:5290/userData/getAllBetweenDates`,
+                    url: `http://localhost:5290/userData/export`,
                     withCredentials: true,
+                    responseType: 'blob',
                     headers: { "Content-Type": "application/json" },
                     data: JSON.stringify({
                         "startDate": dateStart,
                         "stopDate": dateEnd
                     })
                 })
-                    .then(response => console.log(response))
+                    .then(response => {
+                        const a = window.URL.createObjectURL(new Blob([response.data]));
+                        let downloadLnk = document.createElement("a");
+                        downloadLnk.setAttribute("href", a);
+                        downloadLnk.setAttribute("download", `Expenses_${dateStart}_${dateEnd}.xlsx`);
+                        downloadLnk.click();
+                    })
                     .catch(er => alert(er));
             }
         }
@@ -66,8 +73,9 @@ const ExportMain = (props) => {
             }
             axios({
                 method: 'post',
-                url: `http://localhost:5290/userData/getAllBetweenDates`,
+                url: `http://localhost:5290/userData/export`,
                 withCredentials: true,
+                responseType: 'blob',
                 headers: { "Content-Type": "application/json" },
                 data: JSON.stringify({
                     "startDate": start,
@@ -75,7 +83,13 @@ const ExportMain = (props) => {
                 })
 
             })
-                .then(response => console.log(response))
+                .then(response => {
+                    const a = window.URL.createObjectURL(new Blob([response.data]));
+                    let downloadLnk = document.createElement("a");
+                    downloadLnk.setAttribute("href", a);
+                    downloadLnk.setAttribute("download", `Expenses_${start}_${end.getFullYear()}-${end.getMonth() + 1}-${end.getDate()}.xlsx`);
+                    downloadLnk.click();
+                })
                 .catch(er => alert(er));
         }
     }

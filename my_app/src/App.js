@@ -132,7 +132,7 @@ function App() {
   }
 
   const addElem = (newElem) => {
-    let vedro = [...expensesList]
+    let vedro = [...expensesList];
     axios({
       method: 'post',
       url: `http://localhost:5290/userData/add`,
@@ -176,6 +176,25 @@ function App() {
     setExpensesList([]);
   }
 
+  const addElemsFromFile = (elems) => {
+    let vedro = [...expensesList];
+    for (let elem of elems) {
+      vedro.push({
+        id: elem.id,
+        userId: elem.userId,
+        description: elem.expenseDescription,
+        amount: elem.amount,
+        category: Object.values(filterConverter)[elem.category + 1],
+        date: {
+          year: elem.creationDate.split("-")[0],
+          month: elem.creationDate.split("-")[1],
+          day: elem.creationDate.split("-")[2],
+        }
+      });
+    }
+    setExpensesList(vedro);
+  }
+
   const userEmailHandler = (email) => {
     setUserEmail(email);
   }
@@ -199,7 +218,7 @@ function App() {
 
           <Route path="/import" element={
             <PrivateRoute>
-              <ImportPage />
+              <ImportPage addElemsFromFile={addElemsFromFile} />
             </PrivateRoute>
           }></Route>
 

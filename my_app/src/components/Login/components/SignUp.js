@@ -57,6 +57,7 @@ const SignUp = (props) => {
                 //     console.log(response)
                 //     return response;
                 // })
+                console.log(userName);
                 axios(
                     {
                         method: 'post',
@@ -66,7 +67,7 @@ const SignUp = (props) => {
                     }
                 )
                     .then(response => {
-                        if (response.status === 201) {
+                        if (response.status === 200) {
                             axios({
                                 method: 'post',
                                 url: `http://localhost:5290/reg/confirm`,

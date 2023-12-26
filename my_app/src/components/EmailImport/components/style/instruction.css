@@ -26,3 +26,14 @@
     font-size: 40px;
     color: rgb(96, 244, 255);
 }
+
+.copiedText {
+    position: absolute;
+    top: 521px;
+    left: 1370px;
+    background-color: rgb(175 172 207 / 53%);
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 30px;
+    color: #2c2c2c;
+}
