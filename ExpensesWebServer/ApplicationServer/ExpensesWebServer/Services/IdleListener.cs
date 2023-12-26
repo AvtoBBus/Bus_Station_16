@@ -56,6 +56,7 @@ public class IdleListener : BackgroundService, IDisposable
             var users = await userRepository.GetListOfObjects();
             foreach (var u in users)
             {
+                if (u.Email == null) continue;
                 var expenses = expensesProvider.FetchReceitps(u.Email);
                 foreach (var e in expenses) e.UserId = u.Id;
                 await expenseRepository.AddRangeAsync(expenses);
