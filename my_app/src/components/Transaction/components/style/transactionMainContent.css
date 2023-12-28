@@ -33,3 +33,25 @@ input[class="showRepeatInput"]:checked,
 input[class="showRepeatInput"]:not(:checked) {
     transform: scale(1.35);
 }
+
+
+.changeTime {
+    position: absolute;
+    left: 1660px;
+    top: 430px;
+    background-color: #928dcc;
+    width: max-content;
+    height: 60px;
+    font-size: 17px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.changeTimeText {
+    position: absolute;
+    left: 1670px;
+    top: 390px;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 3px 3px 3px #928dcc;
+}

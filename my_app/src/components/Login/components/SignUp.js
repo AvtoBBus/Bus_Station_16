@@ -67,6 +67,7 @@ const SignUp = (props) => {
                     }
                 )
                     .then(response => {
+                        console.log(response);
                         if (response.status === 200) {
                             axios({
                                 method: 'post',

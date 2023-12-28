@@ -213,6 +213,3 @@ D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer
 D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\SixLabors.Fonts.dll
 D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\System.IO.Packaging.dll
 D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\XLParser.dll
-D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\Microsoft.Office.Interop.Excel.dll
-D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\CsvImportProcessorsLibrary.dll
-D:\учёба\для себя\Bus_Station_16\ExpensesWebServer\ApplicationServer\ExpensesWebServer\bin\Debug\net6.0\CsvImportProcessorsLibrary.pdb

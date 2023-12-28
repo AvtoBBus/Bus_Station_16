@@ -60,7 +60,7 @@ public class UserDataController : Controller
     public async Task<IActionResult> GetAllExpenses()
     {
         var verifiedJWT = _jwtService.JwtSecurityToken(Request);
-        if (verifiedJWT == null)
+            if (verifiedJWT == null)
         {
             _logger.LogWarning("JWT was not found");
             return Unauthorized();
